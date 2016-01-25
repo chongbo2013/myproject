@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black" >
+
+    <SurfaceView
+        android:id="@+id/mediaplayersurface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <com.yeyanxiang.view.marquee.MarqueeText
+                android:id="@+id/mediaplayertitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/top_bg"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingBottom="10dip"
+                android:paddingTop="10dip"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="30sp" />
+
+            <RelativeLayout
+                android:id="@+id/mediaplayerbottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/top_bg"
+                android:paddingBottom="5dip" >
+
+                <SeekBar
+                    android:id="@+id/medaplayervideoseekbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:max="3600"
+                    android:maxHeight="10dip"
+                    android:padding="5dip"
+                    android:progressDrawable="@drawable/seekbarbackground"
+                    android:thumb="@drawable/seekbutton" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/medaplayervideoseekbar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="-10dip"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <ImageButton
+                        android:id="@+id/mediaplayerlast"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:background="@drawable/laststyle" />
+
+                    <ImageButton
+                        android:id="@+id/mediaplayerplay"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@drawable/playstyle" />
+
+                    <ImageButton
+                        android:id="@+id/mediaplayernext"
+                        android:layout_width="50dip"
+                        android:layout_height="50dip"
+                        android:layout_marginLeft="10dip"
+                        android:background="@drawable/nextstyle" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/mediaplyervideoprogress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/medaplayervideoseekbar"
+                    android:layout_marginLeft="10dip"
+                    android:text="00:00"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/mediaplayervideolength"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/medaplayervideoseekbar"
+                    android:layout_marginRight="10dip"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:id="@+id/mediaplayerbuffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/mediaplyervideoprogress"
+                    android:layout_marginLeft="10dip"
+                    android:text="正在播放"
+                    android:textColor="@android:color/white" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

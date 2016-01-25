@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RadioGroup
+            android:id="@+id/hometab"
+            android:layout_width="fill_parent"
+            android:layout_height="40dip"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tabbar"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/xindiantab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mytabstytle11"
+                android:button="@null"
+                android:gravity="center"
+                android:text="心电"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/xueyatab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mytabstytle22"
+                android:button="@null"
+                android:gravity="center"
+                android:text="血压"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/xueyangtab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mytabstytle33"
+                android:button="@null"
+                android:gravity="center"
+                android:text="血氧"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/xinlvtab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mytabstytle44"
+                android:button="@null"
+                android:gravity="center"
+                android:text="心率"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/tiwentab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mytabstytle33"
+                android:button="@null"
+                android:gravity="center"
+                android:text="体温"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/historyselect"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/hometab"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <RadioButton
+                android:id="@+id/weekhistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/historytabstytle4"
+                android:button="@null"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="最\n近\n一\n周"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/monthhistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/historytabstytle4"
+                android:button="@null"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="最\n近\n一\n月"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/threemonthhistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/historytabstytle4"
+                android:button="@null"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="最\n近\n三\n月"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+
+            <RadioButton
+                android:id="@+id/sixmonthhistory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/historytabstytle4"
+                android:button="@null"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="最\n近\n半\n年"
+                android:textColor="@android:color/black"
+                android:textSize="10sp" />
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/hometab"
+            android:layout_toRightOf="@id/historyselect" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</TabHost>

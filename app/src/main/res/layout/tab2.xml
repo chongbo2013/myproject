@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RadioGroup
+            android:id="@+id/currenttb"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/black"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/tab1"
+                style="@style/mytabtheme2"
+                android:text="@string/politicsnews" />
+
+            <RadioButton
+                android:id="@+id/tab2"
+                style="@style/mytabtheme2"
+                android:text="@string/departnews" />
+
+            <RadioButton
+                android:id="@+id/tab3"
+                style="@style/mytabtheme2"
+                android:text="@string/activitysubject" />
+
+            <RadioButton
+                android:id="@+id/tab4"
+                style="@style/mytabtheme2"
+                android:text="@string/greatproject" />
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/currenttb" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</TabHost>

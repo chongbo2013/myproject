@@ -1,0 +1,44 @@
+def createBuildConfigField(flavor, type, name, value) {
+    flavor.buildConfigField type, name, value
+}
+
+def createBuildConfigStringField(flavor, name, value) {
+    createBuildConfigField flavor, "String", name, value
+}
+
+def createBuildConfigBooleanField(flavor, name, value) {
+    createBuildConfigField flavor, "boolean", name, value
+}
+
+def buildPartnerKeyInner = { productFlavor, partnerKey ->
+    createBuildConfigStringField productFlavor, "PARTNER_KEY", "\"${partnerKey}\""
+}
+
+def buildPartnerCodeInner = { productFlavor, partnerCode ->
+    createBuildConfigStringField productFlavor, "PARTNER_CODE", "\"${partnerCode}\""
+}
+
+def buildUuidInner = { productFlavor, uuid ->
+    createBuildConfigStringField productFlavor, "UUID", "\"${uuid}\""
+}
+
+def buildProdEvnInner = { productFlavor, isProdEvn ->
+    createBuildConfigBooleanField productFlavor, "ONLINE", "${isProdEvn}"
+}
+
+ext {
+    VERSION_SHA = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+    buildPartners = [:]
+    buildOnlineStatus = [:]
+//    buildEnv = { flavor, partnerKey, partnerCode, uuid, isProdEnv = false ->
+//        buildPartnerKeyInner flavor, partnerKey
+//        buildPartnerCodeInner flavor, partnerCode
+//        buildUuidInner flavor, uuid
+//        buildProdEvnInner flavor, isProdEnv
+//        buildPartners << [(flavor.name) : "${partnerCode}"]
+//        buildOnlineStatus << [(flavor.name) : (isProdEnv)]
+//    }
+    buildEnv = { flavor ->
+
+    }
+}

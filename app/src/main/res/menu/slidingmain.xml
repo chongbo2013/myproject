@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/right"
+        android:icon="@drawable/ic_launcher"
+        android:showAsAction="always"
+        android:title="right_menu"
+        android:visible="true">
+    </item>
+
+</menu>

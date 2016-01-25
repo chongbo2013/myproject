@@ -1,0 +1,123 @@
+<resources>
+
+    <string name="app_name">myproject</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Project</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="google">Google</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="wordpress">Wordpress</string>
+    <string name="myspace">Myspace</string>
+    <string name="start_app">Starting application:</string>
+    <string name="politicsnews">时政\n要闻</string>
+    <string name="activitysubject">活动\n专题</string>
+    <string name="departnews">部门\n新闻</string>
+    <string name="greatproject">重大\n项目</string>
+    <string name="societynews">社会\n新闻</string>
+    <string name="properties">SlidingMenu Properties</string>
+    <string name="general">General</string>
+    <string name="viewpager">ViewPager</string>
+    <string name="attach">Attach</string>
+    <string name="title_bar">Title Bar Options</string>
+    <string name="title_bar_slide">Sliding Title Bar</string>
+    <string name="title_bar_content">Sliding Content Only</string>
+    <string name="animations">Custom Animations</string>
+    <string name="anim_zoom">Zoom</string>
+    <string name="anim_scale">Scale</string>
+    <string name="anim_fold">Fold</string>
+    <string name="anim_slide">Slide Up</string>
+    <string name="changing_fragments">Changing Fragments</string>
+    <string name="responsive_ui">Responsive UI</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="left_and_right">Left and Right</string>
+    <string name="github">GitHub</string>
+    <string name="github_label">SlidingMenu on GitHub</string>
+    <string name="what_is_this">What is this?</string>
+    <string name="responsive_explanation">This is an example of a UI that responds well to device type. On phones, the menu will be placed inside a SlidingMenu, while on tablets the menu will be exposed alongside the content because we have enough room to always show it.</string>
+    <string name="about">About</string>
+    <string name="licenses">Licenses</string>
+    <string name="contact">Contact</string>
+    <string name="del">删除</string>
+    <string name="about_msg">&lt;b>SlidingMenu&lt;/b> is an Open Source Android library 
+        that allows developers to easily create applications with sliding menus like those 
+        made popular in the Google+, YouTube, and Facebook applications. 
+        You can find it on GitHub by clicking the little octocat icon in the ActionBar. 
+        Feel free to use it all you want in your Android apps provided 
+        that you cite this project and include the license in your app.
+        &lt;br>&lt;br>
+		SlidingMenu is currently used in some incredibly popular Android 
+		apps such as Zappos, Plume, VLC for Android, and The Verge. 
+		If you are using SlidingMenu in your app and would like to be 
+		listed here, please let me know via Twitter (@slidingmenu)!</string>
+    <string name="apache_license">&lt;b>SlidingMenu &lt;/b>&lt;br>
+        \u00A9 2012 Jeremy Feinstein&lt;br>
+        SlidingMenu is licensed under the Apache License Version 2.0.
+        &lt;br>&lt;br>
+        &lt;b>ActionBarSherlock &lt;/b>&lt;br>
+        \u00A9 2012 Jake Wharton&lt;br>
+        ActionBarSherlock is licensed under the Apache License Version 2.0.
+        &lt;br>&lt;br>
+		&lt;b>The Apache License Version 2.0&lt;/b>&lt;br>
+		You may obtain a copy of the License at&lt;br>
+		&lt;center>&lt;a href=\'http://www.apache.org/licenses/LICENSE-2.0\'>
+				"http://www.apache.org/licenses/LICENSE-2.0&lt;/a>&lt;/center>&lt;br>
+		Unless required by applicable law or agreed to in writing, 
+		software distributed under the License is distributed on an 
+		\'AS IS\' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+		either express or implied. See the License for the specific 
+		language governing permissions and limitations under the License.</string>
+    <string name="no_email">Sorry, I couldn\'t find any e-mail apps on your phone</string>
+    <string name="filler_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin mauris varius lacus porttitor eget blandit massa facilisis. Nulla pellentesque odio sed purus fermentum vitae viverra orci faucibus. Sed ullamcorper condimentum vulputate. Curabitur sit amet convallis velit. Vestibulum posuere eleifend risus ac adipiscing. Nam pulvinar nulla a velit faucibus imperdiet. Praesent eget nisi ac justo blandit sagittis. Maecenas at leo nisi, nec varius nisl.\nIn hac habitasse platea dictumst. Morbi neque tortor, vestibulum sed viverra a, luctus vel lorem. Nunc turpis eros, varius eget commodo et, euismod at eros. Sed tincidunt mi purus, vel posuere dui. Vestibulum ante lectus, porta sed mattis bibendum, scelerisque cursus sapien. Cras ultrices imperdiet fermentum. Aenean nisi nulla, euismod non blandit ac, dictum quis libero. Morbi consectetur tempor mollis. Suspendisse eget nunc arcu, vel ullamcorper augue. Integer malesuada, diam nec faucibus mollis, nisl velit euismod enim, ac mattis justo neque sit amet mauris. Vivamus pretium imperdiet pharetra.\nInteger sagittis augue sit amet lectus pulvinar sit amet commodo tortor mattis. Maecenas quis tellus eget ante eleifend sollicitudin non et nibh. Maecenas luctus euismod tristique. Fusce in odio nec diam blandit facilisis. Sed nec arcu eros. Vivamus quis tortor a metus tempus aliquam eget volutpat magna. Pellentesque id ultrices dolor. Sed blandit aliquet quam. Phasellus dapibus euismod vulputate. Aenean blandit, elit vitae vestibulum tincidunt, metus dui accumsan nulla, sit amet vehicula mauris lacus in est. Etiam dignissim pellentesque nulla vel malesuada. Cras vel lorem justo.\nSed condimentum nisl sit amet libero vestibulum hendrerit. Duis auctor tempus placerat. Proin velit ante, ornare nec dictum nec, hendrerit eu arcu. Etiam ut diam ornare quam venenatis pulvinar vitae vel leo. Vivamus consectetur, ante id interdum rhoncus, magna eros pulvinar lacus, a gravida nibh arcu vitae eros. Nulla scelerisque laoreet feugiat. Mauris sit amet gravida felis.\nNulla ac dolor sapien, vestibulum venenatis justo. Cras placerat velit vitae nibh pellentesque ultricies. Suspendisse adipiscing enim eu justo iaculis eu pretium urna fermentum. Duis porttitor nunc non nunc mattis vestibulum. Etiam elit tellus, feugiat in bibendum eget, adipiscing nec metus. Ut ut sem lacus, quis faucibus diam. Curabitur a nulla fermentum tortor dignissim posuere. Fusce faucibus ante ut sem imperdiet imperdiet eget vitae lorem. Etiam fringilla ornare ipsum, in sagittis quam ornare vitae. Nullam venenatis orci sit amet sapien adipiscing gravida. Proin turpis lectus, hendrerit vitae vehicula ut, auctor ac lectus. Pellentesque sollicitudin blandit ligula quis commodo. Mauris vulputate lectus in velit luctus aliquam. Quisque eget tincidunt elit. Quisque et augue quam, sed scelerisque eros.</string>
+    <string name="menu_donate">Buy me a beer!</string>
+    <string name="menu_beer">Buy me a beer!</string>
+    <string name="menu_beer2">Buy me 2 beers!</string>
+    <string name="menu_beer3">Buy me 5 beers!</string>
+    <string name="menu_beer4">Buy me 10 beers!</string>
+    <string name="menu_github">Github</string>
+    <string name="googlecards">Google cards example</string>
+    <string name="gridview">GridView example</string>
+    <string name="appearance">Appearance Animation</string>
+    <string name="limit">Limit to 2</string>
+    <string name="itemmanipulation">Item Manipulation</string>
+    <string name="gridviewexample">GridView example</string>
+    <string name="draganddrop">Drag and Drop</string>
+    <string name="swipedismiss">Swipe to dismiss</string>
+    <string name="animateremoval">Animate dismiss</string>
+    <string name="animateaddition">Animate addition</string>
+    <string name="removeselected">Remove selected</string>
+    <string name="expandablelistitemadapter">Expand list items</string>
+    <string name="itemdeleted">Item deleted</string>
+    <string name="taptoundo">Tap to undo</string>
+    <string name="explainexpand">Tap on cards to expand or collapse them</string>
+    <string name="expandorcollapsecard">This is card number %d</string>
+
+    <plurals name="countdown_seconds">
+        <item quantity="one">Dismissing in 1...</item>
+        <item quantity="other">Dismissing in %d...</item>
+    </plurals>
+
+    <string name="countdown_dismissing">Dismissing</string>
+
+    <drawable name="black">#000000</drawable>
+    <drawable name="gallery3dbg">#3982F4</drawable>
+
+    
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="loading_failed">加载失败</string>
+    <string name="loading">Loading...</string>
+    <string name="the_end">TheEnd</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="view_big_image">查看大图</string>
+
+    <string name="pref_app_des">全球有名的搞笑图片分享社区</string>
+    <string name="pref_summary_dev">Developer</string>
+    <string name="pref_title_about">About</string>
+    <string name="pref_title_coder">stormzhang</string>
+    <string name="pref_key_version">pref_key_version</string>
+    <string name="pref_title_github">Github</string>
+</resources>

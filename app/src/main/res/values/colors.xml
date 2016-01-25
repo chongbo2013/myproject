@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="imgbgcolor">#333333</color>
+    <color name="green">#00FF00</color>
+    <color name="bg">#d9d9d1</color>
+    <color name="listselector">#00000000</color>
+    <color name="radio_select">#ffd9e6f0</color>
+    <color name="tableline">#5790f9</color>
+    <color name="red">#900</color>
+    <color name="blue">#009</color>
+
+    <integer-array name="colors">
+        <item>@color/holo_blue_dark</item>
+        <item>@color/holo_yellow_dark</item>
+        <item>@color/holo_green_dark</item>
+        <item>@color/holo_purple_dark</item>
+        <item>@color/holo_red_dark</item>
+    </integer-array>
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#427fed</color>
+    <color name="gplus_color_3">#b23424</color>
+    <color name="gplus_color_4">#f4b400</color>
+    <color name="holo_blue_dark">#0099cc</color>
+    <color name="holo_yellow_dark">#ff8800</color>
+    <color name="holo_green_dark">#669900</color>
+    <color name="holo_purple_dark">#9933cc</color>
+    <color name="holo_red_dark">#cc0000</color>
+    <color name="grey">#C1CDCD</color>
+    <color name="yellow">#ff7300</color>
+    
+    <color name="main_bg">#14439C</color>
+    <color name="dark_blue">#25865E</color>
+    <color name="light_blue">#7FC5B0</color>
+    <color name="light_yellow">#FFF6F7</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="drawer_bg">#FFFFFFcc</color>
+
+    <color name="holo_blue_light">#3333b5e5</color>
+    <color name="holo_green_light">#3399cc00</color>
+    <color name="holo_red_light">#33ff4444</color>
+    <color name="holo_orange_light">#33ffbb33</color>
+    <color name="holo_purple_light">#33aa66cc</color>
+
+</resources>

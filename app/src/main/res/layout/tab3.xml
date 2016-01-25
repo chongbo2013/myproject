@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:scrollbars="none" >
+
+            <RadioGroup
+                android:id="@+id/departs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/black"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/depart1"
+                    style="@style/mytabtheme3"
+                    android:text=" 区教委 " />
+
+                <RadioButton
+                    android:id="@+id/depart2"
+                    style="@style/mytabtheme3"
+                    android:text=" 区农委 " />
+
+                <RadioButton
+                    android:id="@+id/depart3"
+                    style="@style/mytabtheme3"
+                    android:text=" 区商务委 " />
+
+                <RadioButton
+                    android:id="@+id/depart4"
+                    style="@style/mytabtheme3"
+                    android:text=" 区卫生局 " />
+
+                <RadioButton
+                    android:id="@+id/depart5"
+                    style="@style/mytabtheme3"
+                    android:text=" 区政府办 " />
+
+                <RadioButton
+                    android:id="@+id/depart6"
+                    style="@style/mytabtheme3"
+                    android:text=" 区住房 " />
+            </RadioGroup>
+        </HorizontalScrollView>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/horizontalScrollView1" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</TabHost>

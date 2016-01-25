@@ -1,0 +1,801 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yeyanxiang.project">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:name=".gag.App"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.Holo.NoActionBar">
+
+        <!-- MAIN -->
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 乱七八糟 -->
+        <activity
+            android:name=".badgeview.BadgeViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".setting.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".googlemap.ZhiNanZhenActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".applist.ApplistActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".applist.AppList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".phoneinfo.PhoneInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".weather.PmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".circlemenu.CircleMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".gallery3d.Gallery3DActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".dlna.DlnaPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".resideMenu.ResideMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pickerview.PickerViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".webview.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".timeline.TimeLineActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- DIYView -->
+        <activity
+            android:name=".diy.LayoutCollectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".diy.RadialMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".diy.TextVerticalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".draw.DrawActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar" />
+
+        <!-- ListView -->
+        <activity
+            android:name=".mylist.ExpandableListViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mylist.SystemExpandableListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mylist.ElasticityListViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mylist.ListView3DActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mylist.SlideCutListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mylist.ItemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mylist.CircleListViewActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- ListViewAnimation -->
+        <activity
+            android:name=".listviewanimations.ListViewAnimMainActivity"
+            android:label="@string/appearance"
+            android:theme="@style/ListViewAnimTheme" />
+        <activity
+            android:name=".listviewanimations.AppearanceExamplesActivity"
+            android:label="@string/appearance"
+            android:theme="@style/ListViewAnimTheme" />
+        <activity
+            android:name=".listviewanimations.GoogleCardsActivity"
+            android:label="@string/googlecards"
+            android:theme="@style/ListViewAnimTheme" />
+        <activity
+            android:name=".listviewanimations.ItemManipulationsExamplesActivity"
+            android:label="@string/itemmanipulation"
+            android:theme="@style/ListViewAnimTheme" />
+        <activity
+            android:name=".listviewanimations.DragAndDropActivity"
+            android:label="@string/draganddrop"
+            android:theme="@style/ListViewAnimTheme" />
+        <activity
+            android:name=".listviewanimations.SwipeDismissActivity"
+            android:label="@string/swipedismiss"
+            android:theme="@style/ListViewAnimTheme" />
+        <activity
+            android:name=".listviewanimations.AnimateDismissActivity"
+            android:label="@string/animateremoval"
+            android:theme="@style/ListViewAnimTheme" />
+        <activity
+            android:name=".listviewanimations.AnimateAdditionActivity"
+            android:label="@string/animateaddition"
+            android:theme="@style/ListViewAnimTheme" />
+        <activity
+            android:name=".listviewanimations.GridViewActivity"
+            android:label="@string/gridviewexample"
+            android:theme="@style/ListViewAnimTheme" />
+        <activity
+            android:name=".listviewanimations.ExpandableListItemActivity"
+            android:label="@string/expandablelistitemadapter"
+            android:theme="@style/ListViewAnimTheme" />
+
+        <!-- 下拉刷新 -->
+        <activity
+            android:name=".reference.PullRefreshListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reference.PullListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".reference.ReferenceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".referencedemo.PullToRefreshLauncherActivity"
+            android:label="PullToRefresh Samples"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".referencedemo.PullToRefreshListActivity"
+            android:label="PtR ListView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".referencedemo.PullToRefreshListFragmentActivity"
+            android:label="PtR ListView Fragment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".referencedemo.PullToRefreshListInViewPagerActivity"
+            android:label="PtR ListView in ViewPager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".referencedemo.PullToRefreshGridActivity"
+            android:label="PtR GridView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".referencedemo.PullToRefreshExpandableListActivity"
+            android:label="PtR ExpandableListView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".referencedemo.PullToRefreshWebViewActivity"
+            android:label="PtR WebView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".referencedemo.PullToRefreshScrollViewActivity"
+            android:label="PtR ScrollView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".referencedemo.PullToRefreshHorizontalScrollViewActivity"
+            android:label="PtR HorizontalScrollView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".referencedemo.PullToRefreshViewPagerActivity"
+            android:label="PtR ViewPager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".referencedemo.PullToRefreshWebView2Activity"
+            android:label="PtR WebView Advanced"
+            android:screenOrientation="portrait" />
+
+        <!-- SmoothProgressBar -->
+        <activity
+            android:name=".progressbar.SmoothProgressbarActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".progressbar.MakeCustomProgressbarActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Img -->
+        <activity
+            android:name=".image.ImageActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.ImageActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yeyanxiang.view.activity.ImageShowActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.ImgGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.ImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".image.BitmapFragmentActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 消息推送 -->
+        <activity
+            android:name=".androidpn.AndroidpnMainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".androidpn.NotificationDetailsActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".androidpn.MyNotificationService">
+            <intent-filter>
+                <action android:name="androidpncopy" />
+            </intent-filter>
+        </service>
+
+        <!-- Tab -->
+        <activity
+            android:name=".tab.MyTabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tab.MyTabActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tab.MyTabActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tab.MyTabActivity3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tab.MyTabActivity4"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tab.MyTabActivity5"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tab.MyTabActivity6"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tab.FleepTabActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 测试 -->
+        <activity
+            android:name=".pub.util.NullActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pub.util.TestActivity1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pub.util.TestActivity2"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pub.util.TestActivity3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".pub.util.TestActivity4"
+            android:screenOrientation="portrait" />
+
+        <!-- 天气 -->
+        <activity
+            android:name=".weather.WeatherForecastActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 注册插件 -->
+        <receiver android:name=".widget.MyWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name=".MyWidgetProvider"></action>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/mywidget" />
+        </receiver>
+
+        <!-- MediaPlayer -->
+        <activity
+            android:name=".mediaplayer.MediaPlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mediaplayer.FileListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.weiny.MmsPlayerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mediaplayer.MediaPlayerActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+        <!--<activity
+            android:name="io.vov.vitamio.activity.InitActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />-->
+        <activity
+            android:name=".mediaplayer.VitamioAudioPlayerActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+        <activity
+            android:name=".mediaplayer.VitamioVideoPlayerActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+
+        <!-- 医疗 -->
+        <activity
+            android:name=".sign.BluetoothActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".sign.SignHistoryTabActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".sign.ElectrocardioHistoryActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".sign.XueYaHistoryActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".sign.XueYangHistoryActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".sign.XinLvHistoryActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".sign.TempHistoryActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".sign.ElectrocardioOffLineActivity"
+            android:screenOrientation="landscape" />
+
+        <!-- SlidingMenu -->
+        <activity
+            android:name=".slidingmenu.SlidingMenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".slidingmenudemo.SlideExampleListActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar"
+            android:uiOptions="splitActionBarWhenNarrow" />
+        <activity
+            android:name=".slidingmenudemo.PropertiesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".slidingmenudemo.LeftAndRightActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".slidingmenudemo.AttachExample"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".slidingmenudemo.CustomScaleAnimation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".slidingmenudemo.CustomZoomAnimation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".slidingmenudemo.CustomSlideAnimation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".slidingmenudemo.SlidingTitleBar"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".slidingmenudemo.SlidingContent"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".slidingmenudemo.ViewPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".slidingmenudemo.FragmentChangeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".slidingmenudemo.ResponsiveUIActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+        <activity
+            android:name=".slidingmenudemo.BirdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Light.DarkActionBar" />
+
+        <!-- 指示器 -->
+        <activity
+            android:name=".indicator.IndicatorListSamples"
+            android:label="ViewPager Indicator"
+            android:screenOrientation="portrait" />
+
+        <!-- CIRCLE INDICATOR -->
+        <activity
+            android:name=".indicator.SampleCirclesDefault"
+            android:label="Circles/Default"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleCirclesInitialPage"
+            android:label="Circles/Initial Page"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleCirclesSnap"
+            android:label="Circles/Snap"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleCirclesStyledLayout"
+            android:label="Circles/Styled (via layout)"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleCirclesStyledMethods"
+            android:label="Circles/Styled (via methods)"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleCirclesStyledTheme"
+            android:label="Circles/Styled (via theme)"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleCirclesWithListener"
+            android:label="Circles/With Listener"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+
+        <!-- ICON INDICATOR -->
+        <activity
+            android:name=".indicator.SampleIconsDefault"
+            android:label="Icons/Default"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+
+        <!-- LINE INDICATOR -->
+        <activity
+            android:name=".indicator.SampleLinesDefault"
+            android:label="Lines/Default"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleLinesStyledLayout"
+            android:label="Lines/Styled (via layout)"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleLinesStyledMethods"
+            android:label="Lines/Styled (via methods)"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleLinesStyledTheme"
+            android:label="Lines/Styled (via theme)"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+
+        <!-- TITLE INDICATOR -->
+        <activity
+            android:name=".indicator.SampleTitlesBottom"
+            android:label="Titles/Default (Bottom)"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleTitlesCenterClickListener"
+            android:label="Titles/Center Click Listener"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleTitlesDefault"
+            android:label="Titles/Default"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleTitlesInitialPage"
+            android:label="Titles/Initial Page"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleTitlesStyledLayout"
+            android:label="Titles/Styled (via layout)"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleTitlesStyledMethods"
+            android:label="Titles/Styled (via methods)"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleTitlesStyledTheme"
+            android:label="Titles/Styled (via theme)"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleTitlesTriangle"
+            android:label="Titles/Triangle Style"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleTitlesWithListener"
+            android:label="Titles/With Listener"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+
+        <!-- TAB INDICATOR -->
+        <activity
+            android:name=".indicator.SampleTabsDefault"
+            android:label="Tabs/Default"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PageIndicatorDefaults">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleTabsStyled"
+            android:label="Tabs/Styled"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleTabsWithIcons"
+            android:label="Tabs/With Icons"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+
+        <!-- UNDERLINE INDICATOR -->
+        <activity
+            android:name=".indicator.SampleUnderlinesDefault"
+            android:label="Underlines/Default"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleUnderlinesNoFade"
+            android:label="Underlines/No Fade"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleUnderlinesStyledLayout"
+            android:label="Underlines/Styled (via layout)"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleUnderlinesStyledMethods"
+            android:label="Underlines/Styled (via methods)"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".indicator.SampleUnderlinesStyledTheme"
+            android:label="Underlines/Styled (via theme)"
+            android:screenOrientation="portrait"
+            android:theme="@style/StyledIndicators">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.jakewharton.android.viewpagerindicator.sample.SAMPLE" />
+            </intent-filter>
+        </activity>
+
+        <!-- 9GAG -->
+        <provider
+            android:name=".gag.DataProvider"
+            android:authorities=".gag.provider"
+            android:exported="false">
+            <grant-uri-permission android:pathPattern=".*" />
+        </provider>
+
+        <activity
+            android:name=".gag.GaGMainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/GAGAppTheme" />
+        <activity
+            android:name=".gag.ImageViewActivity"
+            android:theme="@style/TranslucentTheme" />
+        <activity
+            android:name=".gag.PreferenceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/TranslucentTheme" />
+
+        <!-- openfire xmpp -->
+        <activity
+            android:name=".xmpp.FormLogin"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".xmpp.FormClient"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".xmpp.FormFiles"
+            android:theme="@style/AppTheme" />
+    </application>
+
+</manifest>

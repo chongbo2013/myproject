@@ -1,0 +1,174 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        tools:context=".ListViewAnimMainActivity"
+        tools:ignore="MergeRootFrame" >
+
+        <Button
+            android:id="@+id/button_make"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Base indeterminate drawable" />
+
+        <ProgressBar
+            style="@style/ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:indeterminateOnly="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LinearInterpolator" />
+
+        <ProgressBar
+            android:id="@+id/progressbar1"
+            style="@style/ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AccelerateInterpolator" />
+
+        <ProgressBar
+            android:id="@+id/progressbar2"
+            style="@style/ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DecelerateInterpolator" />
+
+        <ProgressBar
+            android:id="@+id/progressbar3"
+            style="@style/ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AccelerateDecelerateInterpolator" />
+
+        <ProgressBar
+            android:id="@+id/progressbar4"
+            style="@style/ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <!-- SMOOTH -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red" />
+
+        <com.yeyanxiang.view.smoothprogressbar.SmoothProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:spb_color="#FF4444" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="slow" />
+
+        <com.yeyanxiang.view.smoothprogressbar.SmoothProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:spb_speed="0.2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Big separator length" />
+
+        <com.yeyanxiang.view.smoothprogressbar.SmoothProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:spb_stroke_separator_length="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 sections" />
+
+        <com.yeyanxiang.view.smoothprogressbar.SmoothProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:spb_sections_count="12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reversed" />
+
+        <com.yeyanxiang.view.smoothprogressbar.SmoothProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:spb_reversed="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multiple colors" />
+
+        <com.yeyanxiang.view.smoothprogressbar.SmoothProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:spb_colors="@array/colors"
+            app:spb_sections_count="12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google now" />
+
+        <com.yeyanxiang.view.smoothprogressbar.SmoothProgressBar
+            style="@style/GNowProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GPlus" />
+
+        <com.yeyanxiang.view.smoothprogressbar.SmoothProgressBar
+            style="@style/GPlusProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true" />
+    </LinearLayout>
+
+</ScrollView>

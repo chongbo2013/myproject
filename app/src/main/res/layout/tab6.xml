@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RadioGroup
+            android:id="@+id/departs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/depart1"
+                style="@style/mytabtheme6"
+                android:text="区教委 " />
+
+            <RadioButton
+                android:id="@+id/depart2"
+                style="@style/mytabtheme6"
+                android:text="区农委 " />
+
+            <RadioButton
+                android:id="@+id/depart3"
+                style="@style/mytabtheme6"
+                android:text="商务委 " />
+
+            <RadioButton
+                android:id="@+id/depart4"
+                style="@style/mytabtheme6"
+                android:text="卫生局 " />
+        </RadioGroup>
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/horizontalScrollView1" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.0"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</TabHost>

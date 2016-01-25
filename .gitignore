@@ -1,0 +1,17 @@
+*.iml
+.idea
+.gradle
+build
+*.class
+infer-out/
+local.properties
+captures/
+androidpn/
+asmack/
+listview-anims/
+page-indicator/
+pull-to-refresh/
+utils/
+views/
+vitamio3.0/
+xutilslib2.5.5/

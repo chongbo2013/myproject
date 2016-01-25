@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/webviewlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/urledit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:singleLine="true"
+            android:text="http://m.hao123.com" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/loadbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Load" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loadprogress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="5dip"
+        android:progressDrawable="@drawable/progress_horizontal"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/webview_fullscreen_custom_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/webview_main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </FrameLayout>
+
+</LinearLayout>

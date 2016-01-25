@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yeyanxiang.view.elasticityview.ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.yeyanxiang.view.marquee.MarqueeText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="智慧城市是指充分借助物联网、传感网，涉及到智能楼宇、智能家居、路网监控、智能医院、城市生命线管理、食品药品管理、票证管理、家庭护理、个人健康与数字生活等诸多领域，把握新一轮科技创新革命和信息产业浪潮的重大机遇，充分发挥信息通信（ICT）产业发达、RFID相关技术领先、电信业务及信息化基础设施优良等优势，通过建设ICT基础设施、认证、安全等平台和示范工程，加快产业关键技术攻关，构建城市发展的智慧环境，形成基于海量信息和智能过滤处理的新的生活、产业发展、社会管理等模式，面向未来构建全新的城市形态"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/layoutcollectexittext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape"
+            android:ems="10"
+            android:paddingLeft="15dp"
+            android:text="圆弧文本编辑框"
+            android:textColor="@android:color/black"
+            android:textSize="20dp" >
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/layoutcollectfunction1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shorticonstyle"
+                android:drawableTop="@drawable/icon"
+                android:gravity="center"
+                android:text="功能1" />
+
+            <TextView
+                android:id="@+id/layoutcollectfunction2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:background="@drawable/shorticonstyle"
+                android:drawableTop="@drawable/icon"
+                android:gravity="center"
+                android:text="功能2" />
+
+            <TextView
+                android:id="@+id/layoutcollectfunction3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:background="@drawable/shorticonstyle"
+                android:drawableTop="@drawable/icon"
+                android:gravity="center"
+                android:text="功能3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dip"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/selector_toggle"
+                android:checked="false"
+                android:textOff=""
+                android:textOn="" />
+        </LinearLayout>
+
+        <com.yeyanxiang.view.MultipleSpinner
+            android:id="@+id/MultipleSpinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dip" />
+
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:max="100"
+            android:maxHeight="20dip"
+            android:padding="5dip"
+            android:progressDrawable="@drawable/seekbarbackground"
+            android:thumb="@drawable/seekbutton" />
+
+        <com.yeyanxiang.view.marquee.AutoScrollTextView
+            android:id="@+id/autoscrolltext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/scrollbg"
+            android:padding="10dip"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dip" >
+
+            <Button
+                android:id="@+id/circlebutton"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:text="run"
+                android:textSize="20sp" />
+
+            <com.yeyanxiang.view.CircleProgressbar
+                android:id="@+id/circleprogress"
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:layout_marginLeft="20dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+</com.yeyanxiang.view.elasticityview.ScrollView>
