@@ -20,6 +20,7 @@ android {
 }
 
 dependencies {
-    compile files('libs/nineoldandroids-2.4.0.jar')
+//    compile files('libs/nineoldandroids-2.4.0.jar')
     compile files('libs/stickylistheaders_lib.jar')
+    compile 'com.nineoldandroids:library:2.4.0'
 }

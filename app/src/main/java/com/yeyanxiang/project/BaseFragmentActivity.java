@@ -1,12 +1,13 @@
 package com.yeyanxiang.project;
 
-import com.yeyanxiang.view.util.ActivityUtil;
-import com.yeyanxiang.view.marquee.MarqueeText;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import com.yeyanxiang.view.util.ActivityUtil;
 
 /**
  * @author 叶雁翔
@@ -33,13 +34,13 @@ public class BaseFragmentActivity extends FragmentActivity {
 
 	public Button left_title_btton;
 	public Button right_title_btton;
-	public MarqueeText center_title_text;
+	public TextView center_title_text;
 
 	public void initTopView() {
 		// TODO Auto-generated method stub
 		left_title_btton = (Button) findViewById(R.id.left_title_btton);
 		right_title_btton = (Button) findViewById(R.id.right_title_btton);
-		center_title_text = (MarqueeText) findViewById(R.id.topTextView);
+		center_title_text = (TextView) findViewById(R.id.topTextView);
 
 		left_title_btton.setOnClickListener(new View.OnClickListener() {
 

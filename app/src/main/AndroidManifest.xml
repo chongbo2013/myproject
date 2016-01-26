@@ -88,6 +88,8 @@
             android:name=".timeline.TimeLineActivity"
             android:screenOrientation="portrait" />
 
+        <activity android:name=".toast.ToastActivity" />
+
         <!-- DIYView -->
         <activity
             android:name=".diy.LayoutCollectActivity"
