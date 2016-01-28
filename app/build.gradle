@@ -28,6 +28,7 @@ android {
     }
 
     packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
         exclude 'META-INF/LICENSE.txt'
         exclude 'META-INF/NOTICE.txt'
     }
@@ -54,7 +55,7 @@ android {
 
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             signingConfig signingConfigs.release
             zipAlignEnabled true
         }
@@ -77,16 +78,12 @@ dependencies {
     compile project(':views')
     compile project(':page-indicator')
     compile project(':pull-to-refresh')
-
     compile files('libs/butterknife-5.0.0.jar')
     compile files('libs/photoviewlibrary.jar')
-//    compile files('libs/nineoldandroids-2.4.0.jar')
-//    compile files('libs/universal-image-loader-1.9.1.jar')
-//    compile files('libs/volley.jar')
-
+    //    compile files('libs/nineoldandroids-2.4.0.jar')
+    //    compile files('libs/universal-image-loader-1.9.1.jar')
+    //    compile files('libs/volley.jar')
     compile 'com.google.code.gson:gson:2.5+'
     compile 'com.android.support:appcompat-v7:21.+'
     compile 'com.mcxiaoke.volley:library:1.0.+'
-
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
 }
