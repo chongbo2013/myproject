@@ -201,19 +201,19 @@ public class MainActivity extends com.yeyanxiang.project.activity.BaseActivity {
         functionList.add(new Entry<Class>("LoadToast", ToastActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("DragSort", DragSortActivity.class, Entry.Type.CLASS));
 
-        functionList.add(new Entry<String>("DLNA多媒体共享", "com.bubblesoft.android.bubbleupnp", Entry.Type.PACKAGE));
-        functionList.add(new Entry<String>("百度地图 Demo", "baidumapsdk.demo", Entry.Type.PACKAGE));
-        functionList.add(new Entry<String>("高德地图 Demo", "com.amapv2.cn.apis", Entry.Type.PACKAGE));
-        functionList.add(new Entry<String>("Jetsen 通讯录", "jetsen.contact", Entry.Type.PACKAGE));
-        functionList.add(new Entry<String>("移动政务", "mobile.gov.show", Entry.Type.PACKAGE));
-        functionList.add(new Entry<String>("南宁报料", "com.jetsen.phone", Entry.Type.PACKAGE));
-        functionList.add(new Entry<String>("天安门应急现场", "tam.emergency", Entry.Type.PACKAGE));
-        functionList.add(new Entry<String>("天安门微视频审核", "com.jetsen.tam.mobile.audit", Entry.Type.PACKAGE));
-        functionList.add(new Entry<String>("北京台", "com.beijing.tv", Entry.Type.PACKAGE));
-        functionList.add(new Entry<String>("北京台（演示版）", "com.beijing.tv.show", Entry.Type.PACKAGE));
-        functionList.add(new Entry<String>("智慧交通手机端", "com.jetsen.smart.traffic.phone", Entry.Type.PACKAGE));
-        functionList.add(new Entry<String>("智慧教育", "com.jetsen.education", Entry.Type.PACKAGE));
-        functionList.add(new Entry<String>("美院作品展示", "com.jetsen.education.art", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("DLNA多媒体共享", "com.bubblesoft.android.bubbleupnp", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("百度地图 Demo", "baidumapsdk.demo", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("高德地图 Demo", "com.amapv2.cn.apis", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("Jetsen 通讯录", "jetsen.contact", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("移动政务", "mobile.gov.show", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("南宁报料", "com.jetsen.phone", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("天安门应急现场", "tam.emergency", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("天安门微视频审核", "com.jetsen.tam.mobile.audit", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("北京台", "com.beijing.tv", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("北京台（演示版）", "com.beijing.tv.show", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("智慧交通手机端", "com.jetsen.smart.traffic.phone", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("智慧教育", "com.jetsen.education", Entry.Type.PACKAGE));
+//        functionList.add(new Entry<String>("美院作品展示", "com.jetsen.education.art", Entry.Type.PACKAGE));
         listView.setAdapter(new FunctionListAdapter(functionList));
         searchList = new ArrayList<>();
     }

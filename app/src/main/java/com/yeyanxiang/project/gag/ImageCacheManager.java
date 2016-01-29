@@ -8,6 +8,7 @@ import android.graphics.drawable.TransitionDrawable;
 import android.widget.ImageView;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
+import com.yeyanxiang.project.ProjectApplication;
 
 
 /**
@@ -23,7 +24,7 @@ import com.android.volley.toolbox.ImageLoader;
  */
 public class ImageCacheManager {
     // 取运行内存阈值的1/8作为图片缓存
-    private static final int MEM_CACHE_SIZE = 1024 * 1024 * ((ActivityManager) App.getContext()
+    private static final int MEM_CACHE_SIZE = 1024 * 1024 * ((ActivityManager) ProjectApplication.getContext()
             .getSystemService(Context.ACTIVITY_SERVICE)).getMemoryClass() / 8;
 
     private static ImageLoader mImageLoader = new ImageLoader(RequestManager.mRequestQueue, new BitmapLruCache(
@@ -60,7 +61,7 @@ public class ImageCacheManager {
                         TransitionDrawable transitionDrawable = new TransitionDrawable(
                                 new Drawable[]{
                                         defaultImageDrawable,
-                                        new BitmapDrawable(App.getContext().getResources(),
+                                        new BitmapDrawable(ProjectApplication.getContext().getResources(),
                                                 response.getBitmap())
                                 }
                         );

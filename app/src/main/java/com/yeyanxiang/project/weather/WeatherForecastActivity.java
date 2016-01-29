@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -46,6 +47,8 @@ public class WeatherForecastActivity extends BaseActivity {
     private ImageView afterDayWhIcon2;
     private TextView textWeatherAfterDay;
     private TextView textWeatherCurrent;
+
+    private SearchView mSearchView;
 
     private Weather weather;
     private Weather.DayWeather today;
@@ -123,7 +126,7 @@ public class WeatherForecastActivity extends BaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.weather);
+        setContentView(R.layout.weather_layout);
 
         context = this;
         todayWhIcon1 = (ImageView) findViewById(R.id.todayWhIcon1);
@@ -136,6 +139,37 @@ public class WeatherForecastActivity extends BaseActivity {
         afterDayWhIcon2 = (ImageView) findViewById(R.id.afterdayWhIcon2);
         textWeatherAfterDay = (TextView) findViewById(R.id.weatherAfterday);
         textWeatherCurrent = (TextView) findViewById(R.id.weatherCurrent);
+        mSearchView = (SearchView) findViewById(R.id.weather_searchView);
+
+        mSearchView.setOnSearchClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logi("onSearchClick");
+            }
+        });
+
+        mSearchView.setOnCloseListener(new SearchView.OnCloseListener() {
+            @Override
+            public boolean onClose() {
+                logi("onSearchClose");
+                return false;
+            }
+        });
+
+        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                logi("onQueryTextSubmit " + query);
+                showWeather(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                logi("onQueryTextChange " + newText);
+                return false;
+            }
+        });
 
         // 获取程序界面中选择省份、城市的Spinner组件
         provinceSpinner = (Spinner) findViewById(R.id.province);
@@ -188,14 +222,7 @@ public class WeatherForecastActivity extends BaseActivity {
             @Override
             public void onItemSelected(AdapterView<?> source, View parent, int position, long id) {
                 mSharedPfsUtil.putValue("cityposition", position);
-                new Thread(new Runnable() {
-
-                    @Override
-                    public void run() {
-                        // TODO Auto-generated method stub
-                        showWeather(citySpinner.getSelectedItem().toString());
-                    }
-                }).start();
+                showWeather(citySpinner.getSelectedItem().toString());
             }
 
             @Override
@@ -222,24 +249,28 @@ public class WeatherForecastActivity extends BaseActivity {
         }).start();
     }
 
-    private void showWeather(String city) {
-        // 获取远程Web Service返回的对象
-        try {
-            handler.sendEmptyMessage(5);
-            weather = WebServiceUtil.getWeatherByCity1(city);
-            today = weather.getWeather_of_today();
-            tomorrow = weather.getWeather_of_tomorrow();
-            afterTomorrow = weather.getWeather_of_aftertomorrow();
+    private void showWeather(final String city) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                // 获取远程Web Service返回的对象
+                try {
+                    handler.sendEmptyMessage(5);
+                    weather = WebServiceUtil.getWeatherByCity1(city);
+                    today = weather.getWeather_of_today();
+                    tomorrow = weather.getWeather_of_tomorrow();
+                    afterTomorrow = weather.getWeather_of_aftertomorrow();
 
-            // 更新当天的天气实况
-            weatherLive = weather.getWeatherlive();
-            handler.sendEmptyMessage(4);
-        } catch (Exception e) {
-            // TODO: handle exception
-            handler.sendEmptyMessage(6);
-        }
-
-        handler.sendEmptyMessage(3);
+                    // 更新当天的天气实况
+                    weatherLive = weather.getWeatherlive();
+                    handler.sendEmptyMessage(4);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    handler.sendEmptyMessage(6);
+                }
+                handler.sendEmptyMessage(3);
+            }
+        }).start();
     }
 
 }

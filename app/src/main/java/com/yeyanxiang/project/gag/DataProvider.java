@@ -11,15 +11,13 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.util.Log;
 
+import com.yeyanxiang.project.ProjectApplication;
+
 /**
  * @author 叶雁翔
- * 
- * @Email yanxiang1120@gmail.com
- * 
  * @version 1.0
- * 
+ * @Email yanxiang1120@gmail.com
  * @update 2014年6月26日
- * 
  * @简介
  */
 public class DataProvider extends ContentProvider {
@@ -54,7 +52,7 @@ public class DataProvider extends ContentProvider {
 
     public static DBHelper getDBHelper() {
         if (mDBHelper == null) {
-            mDBHelper = new DBHelper(App.getContext());
+            mDBHelper = new DBHelper(ProjectApplication.getContext());
         }
         return mDBHelper;
     }

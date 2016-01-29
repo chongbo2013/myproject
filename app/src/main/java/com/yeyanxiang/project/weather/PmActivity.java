@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -37,6 +38,8 @@ public class PmActivity extends BaseActivity {
     private Spinner pmCity;
     private ArrayList<String> cityLists;
 
+    private SearchView mSearchView;
+
     private Handler handler = new Handler() {
         public void handleMessage(android.os.Message msg) {
             if (msg.what == 0) {
@@ -66,9 +69,10 @@ public class PmActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pmlayout);
+        setContentView(R.layout.pm_layout);
         contentTextView = (TextView) findViewById(R.id.pmcontent);
         pmCity = (Spinner) findViewById(R.id.pmcity);
+        mSearchView = (SearchView) findViewById(R.id.pm_searchView);
         cityLists = new ArrayList<String>();
         pmCity.setEnabled(false);
         contentTextView.setText("加载中...");
@@ -79,14 +83,7 @@ public class PmActivity extends BaseActivity {
             public void onItemSelected(AdapterView<?> parent, View view, final int position, long id) {
                 // TODO Auto-generated method stub
                 mSharedPfsUtil.putValue(CITY_SELECTION, position);
-                new Thread(new Runnable() {
-
-                    @Override
-                    public void run() {
-                        // TODO Auto-generated method stub
-                        getpm(cityLists.get(position));
-                    }
-                }).start();
+                getPm(cityLists.get(position));
             }
 
             @Override
@@ -96,6 +93,23 @@ public class PmActivity extends BaseActivity {
             }
         });
 
+        getCitys();
+
+        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                getPm(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+    }
+
+    private void getCitys() {
         new Thread(new Runnable() {
 
             @Override
@@ -122,50 +136,54 @@ public class PmActivity extends BaseActivity {
                 }
             }
         }).start();
-
     }
 
-    private void getpm(String cityname) {
-        handler.sendEmptyMessage(2);
-        String value = HttpUtil.sendGetRequest(pmUrl + "?city=" + cityname + "&token=" + appKey, 10000, false);
+    private void getPm(final String cityName) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                handler.sendEmptyMessage(2);
+                String value = HttpUtil.sendGetRequest(pmUrl + "?city=" + cityName + "&token=" + appKey, 10000, false);
 
-        try {
-            // JSONObject jsonObject = new JSONObject(value);
+                try {
+                    // JSONObject jsonObject = new JSONObject(value);
 
-            JSONArray jsonarray = new JSONObject("{\"pmvalue\":" + value + "}").getJSONArray("pmvalue");
-            StringBuffer stringBuffer = new StringBuffer();
-            for (int i = 0; i < jsonarray.length(); i++) {
-                JSONObject jsonObject = (JSONObject) jsonarray.opt(i);
+                    JSONArray jsonarray = new JSONObject("{\"pmvalue\":" + value + "}").getJSONArray("pmvalue");
+                    StringBuffer stringBuffer = new StringBuffer();
+                    for (int i = 0; i < jsonarray.length(); i++) {
+                        JSONObject jsonObject = (JSONObject) jsonarray.opt(i);
 
-                stringBuffer.append("城市：" + jsonObject.getString("area") + "\n");
-                if (!jsonObject.isNull("position_name")) {
-                    stringBuffer.append("监测点名称：" + jsonObject.getString("position_name") + "\n");
+                        stringBuffer.append("城市：" + jsonObject.getString("area") + "\n");
+                        if (!jsonObject.isNull("position_name")) {
+                            stringBuffer.append("监测点名称：" + jsonObject.getString("position_name") + "\n");
+                        }
+                        if (!jsonObject.isNull("station_code")) {
+                            stringBuffer.append("监测点编码：" + jsonObject.getString("station_code") + "\n");
+                        }
+                        stringBuffer.append("空气质量指数：" + jsonObject.getString("aqi") + "\n");
+                        if (!jsonObject.isNull("primary_pollutant")) {
+                            stringBuffer.append("首要污染物：" + jsonObject.getString("primary_pollutant") + "\n");
+                        }
+                        stringBuffer.append("空气质量指数类别：" + jsonObject.getString("quality") + "\n");
+                        stringBuffer.append("颗粒物（粒径小于等于2.5μm）1小时平均：" + jsonObject.getString("pm2_5") + "\n");
+                        stringBuffer.append("颗粒物（粒径小于等于2.5μm）24小时滑动平均：" + jsonObject.getString("pm2_5_24h") + "\n");
+                        stringBuffer.append("数据发布的时间：" + jsonObject.getString("time_point").replace("T", " ").replace("Z", "") + "\n\n");
+                    }
+
+                    Message message = new Message();
+                    message.what = 0;
+                    message.obj = stringBuffer.toString();
+                    handler.sendMessage(message);
+                } catch (JSONException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                    String error = e.getLocalizedMessage();
+                    Message message = new Message();
+                    message.what = 0;
+                    message.obj = error;
+                    handler.sendMessage(message);
                 }
-                if (!jsonObject.isNull("station_code")) {
-                    stringBuffer.append("监测点编码：" + jsonObject.getString("station_code") + "\n");
-                }
-                stringBuffer.append("空气质量指数：" + jsonObject.getString("aqi") + "\n");
-                if (!jsonObject.isNull("primary_pollutant")) {
-                    stringBuffer.append("首要污染物：" + jsonObject.getString("primary_pollutant") + "\n");
-                }
-                stringBuffer.append("空气质量指数类别：" + jsonObject.getString("quality") + "\n");
-                stringBuffer.append("颗粒物（粒径小于等于2.5μm）1小时平均：" + jsonObject.getString("pm2_5") + "\n");
-                stringBuffer.append("颗粒物（粒径小于等于2.5μm）24小时滑动平均：" + jsonObject.getString("pm2_5_24h") + "\n");
-                stringBuffer.append("数据发布的时间：" + jsonObject.getString("time_point").replace("T", " ").replace("Z", "") + "\n\n");
             }
-
-            Message message = new Message();
-            message.what = 0;
-            message.obj = stringBuffer.toString();
-            handler.sendMessage(message);
-        } catch (JSONException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-            String error = e.getLocalizedMessage();
-            Message message = new Message();
-            message.what = 0;
-            message.obj = error;
-            handler.sendMessage(message);
-        }
+        }).start();
     }
 }

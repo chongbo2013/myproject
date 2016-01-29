@@ -1,12 +1,14 @@
 package com.yeyanxiang.project.gag;
 
-import com.yeyanxiang.project.R;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.yeyanxiang.project.ProjectApplication;
+import com.yeyanxiang.project.R;
 
 /**
  * @author 叶雁翔
@@ -44,7 +46,7 @@ public class DrawerAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = LayoutInflater.from(App.getContext()).inflate(R.layout.listitem_drawer, null);
+            convertView = LayoutInflater.from(ProjectApplication.getContext()).inflate(R.layout.listitem_drawer, null);
         }
         TextView textView = (TextView) convertView.findViewById(R.id.textView);
         textView.setText(getItem(position).getDisplayName());
