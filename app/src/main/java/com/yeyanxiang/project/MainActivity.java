@@ -1,6 +1,5 @@
 package com.yeyanxiang.project;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -32,6 +31,7 @@ import com.yeyanxiang.project.diy.LayoutCollectActivity;
 import com.yeyanxiang.project.diy.RadialMenuActivity;
 import com.yeyanxiang.project.diy.TextVerticalActivity;
 import com.yeyanxiang.project.dlna.DlnaPhoneActivity;
+import com.yeyanxiang.project.dragsort.DragSortActivity;
 import com.yeyanxiang.project.draw.DrawActivity;
 import com.yeyanxiang.project.gag.GaGMainActivity;
 import com.yeyanxiang.project.gallery3d.Gallery3DActivity;
@@ -52,7 +52,6 @@ import com.yeyanxiang.project.mylist.SystemExpandableListActivity;
 import com.yeyanxiang.project.phoneinfo.PhoneInfoActivity;
 import com.yeyanxiang.project.pickerview.PickerViewActivity;
 import com.yeyanxiang.project.progressbar.SmoothProgressbarActivity;
-import com.yeyanxiang.project.pub.util.MyEntry;
 import com.yeyanxiang.project.pub.util.PubUtil;
 import com.yeyanxiang.project.reference.PullListActivity;
 import com.yeyanxiang.project.reference.PullRefreshListActivity;
@@ -73,6 +72,8 @@ import com.yeyanxiang.project.weather.PmActivity;
 import com.yeyanxiang.project.weather.WeatherForecastActivity;
 import com.yeyanxiang.project.webview.WebViewActivity;
 import com.yeyanxiang.project.xmpp.FormLogin;
+import com.yeyanxiang.util.ToastUtil;
+import com.yeyanxiang.util.entry.Entry;
 import com.yeyanxiang.view.BadgeView;
 
 import java.util.ArrayList;
@@ -84,20 +85,25 @@ import java.util.ArrayList;
  * @update 2014年3月13日
  * @简介
  */
-public class MainActivity extends Activity {
+public class MainActivity extends com.yeyanxiang.project.activity.BaseActivity {
     private ListView listView;
     private EditText editText;
-    private ArrayList<MyEntry> functionList;
-    private ArrayList<MyEntry> searchList;
-    private Context context;
+    private ArrayList<Entry> functionList;
+    private ArrayList<Entry> searchList;
+    private Context mContext;
     private PackageManager pm;
     private String search = "";
+
+    @Override
+    public String getTAG() {
+        return "MainActivity";
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        context = MainActivity.this;
+        mContext = MainActivity.this;
         pm = getPackageManager();
         init();
     }
@@ -129,7 +135,7 @@ public class MainActivity extends Activity {
                 // System.out.println("---afterTextChanged---" + s.toString());
                 search = s.toString().trim().toLowerCase();
                 if (TextUtils.isEmpty(search)) {
-                    listView.setAdapter(new Myadapter(functionList));
+                    listView.setAdapter(new FunctionListAdapter(functionList));
                 } else {
                     searchList.clear();
                     for (int i = 0; i < functionList.size(); i++) {
@@ -137,7 +143,7 @@ public class MainActivity extends Activity {
                             searchList.add(functionList.get(i));
                         }
                     }
-                    listView.setAdapter(new Myadapter(searchList));
+                    listView.setAdapter(new FunctionListAdapter(searchList));
                 }
             }
         });
@@ -146,67 +152,69 @@ public class MainActivity extends Activity {
         listView.setOnItemSelectedListener(itemSelectedListener);
         functionList = new ArrayList<>();
 
-        functionList.add(new MyEntry("DIY View", new Intent(context, LayoutCollectActivity.class)));
-        functionList.add(new MyEntry("Badge View", new Intent(context, BadgeViewActivity.class)));
-        functionList.add(new MyEntry("APP List", new Intent(context, ApplistActivity.class)));
-        functionList.add(new MyEntry("Player", new Intent(context, MediaPlayActivity.class)));
-        functionList.add(new MyEntry("Sliding Menu", new Intent(context, SlidingMenuActivity.class)));
-        functionList.add(new MyEntry("Sliding Menu Demo", new Intent(context, SlideExampleListActivity.class)));
-        functionList.add(new MyEntry("Indicator", new Intent(context, IndicatorListSamples.class)));
-        functionList.add(new MyEntry("Circle Menu", new Intent(context, CircleMenuActivity.class)));
-        functionList.add(new MyEntry("Radia Menu", new Intent(context, RadialMenuActivity.class)));
-        functionList.add(new MyEntry("Reside Menu", new Intent(context, ResideMenuActivity.class)));
-        functionList.add(new MyEntry("Picker View", new Intent(context, PickerViewActivity.class)));
-        functionList.add(new MyEntry("WebView", new Intent(context, WebViewActivity.class)));
-        functionList.add(new MyEntry("SettingLayout", new Intent(context, SettingActivity.class)));
-        functionList.add(new MyEntry("SmoothProgressBar", new Intent(context, SmoothProgressbarActivity.class)));
-        functionList.add(new MyEntry("VerticalTextView", new Intent(context, TextVerticalActivity.class)));
-        functionList.add(new MyEntry("PhoneInfo", new Intent(context, PhoneInfoActivity.class)));
-        functionList.add(new MyEntry("ListViewAnimation", new Intent(context, ListViewAnimMainActivity.class)));
-        functionList.add(new MyEntry("9GaG", new Intent(context, GaGMainActivity.class)));
-        functionList.add(new MyEntry("时间轴", new Intent(context, TimeLineActivity.class)));
-        functionList.add(new MyEntry("下拉刷新", new Intent(context, PullToRefreshLauncherActivity.class)));
-        functionList.add(new MyEntry("Android 自带下拉刷新", new Intent(context, ReferenceActivity.class)));
-        functionList.add(new MyEntry("自定义List1(下拉刷新)", new Intent(context, PullRefreshListActivity.class)));
-        functionList.add(new MyEntry("自定义List1(下拉刷新2)", new Intent(context, PullListActivity.class)));
-        functionList.add(new MyEntry("自定义List2(分层List)", new Intent(context, ExpandableListViewActivity.class)));
-        functionList.add(new MyEntry("自定义List3(仿QQ List)", new Intent(context, SystemExpandableListActivity.class)));
-        functionList.add(new MyEntry("自定义List4(仿Iphone List带弹性)", new Intent(context, ElasticityListViewActivity.class)));
-        functionList.add(new MyEntry("自定义List5(3D效果)", new Intent(context, ListView3DActivity.class)));
-        functionList.add(new MyEntry("自定义List6(侧滑删除)", new Intent(context, SlideCutListActivity.class)));
-        functionList.add(new MyEntry("自定义List7(圆弧ListView)", new Intent(context, CircleListViewActivity.class)));
-        functionList.add(new MyEntry("自定义Gallery", new Intent(context, Gallery3DActivity.class)));
-        functionList.add(new MyEntry("自定义画笔", new Intent(context, DrawActivity.class)));
-        functionList.add(new MyEntry("自定义Tab风格", new Intent(context, MyTabActivity.class)));
-        functionList.add(new MyEntry("滑动切换Tab", new Intent(context, FleepTabActivity.class)));
-        functionList.add(new MyEntry("指南针", new Intent(context, ZhiNanZhenActivity.class)));
-        functionList.add(new MyEntry("天气预报", new Intent(context, WeatherForecastActivity.class)));
-        functionList.add(new MyEntry("空气质量", new Intent(context, PmActivity.class)));
-        functionList.add(new MyEntry("多点触控1", new Intent(context, ImageActivity1.class)));
-        functionList.add(new MyEntry("多点触控2", new Intent(context, ImageActivity2.class)));
-        functionList.add(new MyEntry("图片组浏览", new Intent(context, ImgGroupActivity.class)));
-        functionList.add(new MyEntry("加载网络图片", new Intent(context, BitmapFragmentActivity.class)));
-        functionList.add(new MyEntry("体征实时监护", new Intent(context, BluetoothActivity.class)));
-        functionList.add(new MyEntry("体征历史图表", new Intent(context, SignHistoryTabActivity.class)));
-        functionList.add(new MyEntry("体征模拟数据", new Intent(context, ElectrocardioOffLineActivity.class)));
-        functionList.add(new MyEntry("消息推送", new Intent(context, AndroidpnMainActivity.class)));
-        functionList.add(new MyEntry("消息推送2 openfire", new Intent(context, FormLogin.class)));
-        functionList.add(new MyEntry("DLNA之phone端", new Intent(context, DlnaPhoneActivity.class)));
-        functionList.add(new MyEntry("LoadToast", new Intent(context, ToastActivity.class)));
-//        functionList.add(new MyEntry("DLNA多媒体共享", pm.getLaunchIntentForPackage("com.bubblesoft.android.bubbleupnp"), true));
-//        functionList.add(new MyEntry("百度地图 Demo", pm.getLaunchIntentForPackage("baidumapsdk.demo"), true));
-//        functionList.add(new MyEntry("高德地图 Demo", pm.getLaunchIntentForPackage("com.amapv2.cn.apis"), true));
-//        functionList.add(new MyEntry("Jetsen 通讯录", pm.getLaunchIntentForPackage("jetsen.contact"), true));
-//        functionList.add(new MyEntry("移动政务", pm.getLaunchIntentForPackage("mobile.gov.show"), true));
-//        functionList.add(new MyEntry("南宁报料", pm.getLaunchIntentForPackage("com.jetsen.phone"), true));
-//        functionList.add(new MyEntry("天安门应急现场", pm.getLaunchIntentForPackage("tam.emergency"), true));
-//        functionList.add(new MyEntry("天安门微视频审核", pm.getLaunchIntentForPackage("com.jetsen.tam.mobile.audit"), true));
-//        functionList.add(new MyEntry("北京台", pm.getLaunchIntentForPackage("com.beijing.tv"), true));
-//        functionList.add(new MyEntry("北京台（演示版）", pm.getLaunchIntentForPackage("com.beijing.tv.show"), true));
-//        functionList.add(new MyEntry("智慧交通手机端", pm.getLaunchIntentForPackage("com.jetsen.smart.traffic.phone"), true));
-//        functionList.add(new MyEntry("智慧教育", pm.getLaunchIntentForPackage("com.jetsen.education"), true));
-//        functionList.add(new MyEntry("美院作品展示", pm.getLaunchIntentForPackage("com.jetsen.education.art"), true));
-        listView.setAdapter(new Myadapter(functionList));
+        functionList.add(new Entry<Class>("DIY View", LayoutCollectActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Badge View", BadgeViewActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("APP List", ApplistActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Player", MediaPlayActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Sliding Menu", SlidingMenuActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Sliding Menu Demo", SlideExampleListActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Indicator", IndicatorListSamples.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Circle Menu", CircleMenuActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Radia Menu", RadialMenuActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Reside Menu", ResideMenuActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Picker View", PickerViewActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("WebView", WebViewActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("SettingLayout", SettingActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("SmoothProgressBar", SmoothProgressbarActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("VerticalTextView", TextVerticalActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("PhoneInfo", PhoneInfoActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("ListViewAnimation", ListViewAnimMainActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("9GaG", GaGMainActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("时间轴", TimeLineActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("下拉刷新", PullToRefreshLauncherActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Android 自带下拉刷新", ReferenceActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("自定义List1(下拉刷新)", PullRefreshListActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("自定义List1(下拉刷新2)", PullListActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("自定义List2(分层List)", ExpandableListViewActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("自定义List3(仿QQ List)", SystemExpandableListActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("自定义List4(仿Iphone List带弹性)", ElasticityListViewActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("自定义List5(3D效果)", ListView3DActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("自定义List6(侧滑删除)", SlideCutListActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("自定义List7(圆弧ListView)", CircleListViewActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("自定义Gallery", Gallery3DActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("自定义画笔", DrawActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("自定义Tab风格", MyTabActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("滑动切换Tab", FleepTabActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("指南针", ZhiNanZhenActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("天气预报", WeatherForecastActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("空气质量", PmActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("多点触控1", ImageActivity1.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("多点触控2", ImageActivity2.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("图片组浏览", ImgGroupActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("加载网络图片", BitmapFragmentActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("体征实时监护", BluetoothActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("体征历史图表", SignHistoryTabActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("体征模拟数据", ElectrocardioOffLineActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("消息推送", AndroidpnMainActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("消息推送2 openfire", FormLogin.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("DLNA之phone端", DlnaPhoneActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("LoadToast", ToastActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("DragSort", DragSortActivity.class, Entry.Type.CLASS));
+
+        functionList.add(new Entry<String>("DLNA多媒体共享", "com.bubblesoft.android.bubbleupnp", Entry.Type.PACKAGE));
+        functionList.add(new Entry<String>("百度地图 Demo", "baidumapsdk.demo", Entry.Type.PACKAGE));
+        functionList.add(new Entry<String>("高德地图 Demo", "com.amapv2.cn.apis", Entry.Type.PACKAGE));
+        functionList.add(new Entry<String>("Jetsen 通讯录", "jetsen.contact", Entry.Type.PACKAGE));
+        functionList.add(new Entry<String>("移动政务", "mobile.gov.show", Entry.Type.PACKAGE));
+        functionList.add(new Entry<String>("南宁报料", "com.jetsen.phone", Entry.Type.PACKAGE));
+        functionList.add(new Entry<String>("天安门应急现场", "tam.emergency", Entry.Type.PACKAGE));
+        functionList.add(new Entry<String>("天安门微视频审核", "com.jetsen.tam.mobile.audit", Entry.Type.PACKAGE));
+        functionList.add(new Entry<String>("北京台", "com.beijing.tv", Entry.Type.PACKAGE));
+        functionList.add(new Entry<String>("北京台（演示版）", "com.beijing.tv.show", Entry.Type.PACKAGE));
+        functionList.add(new Entry<String>("智慧交通手机端", "com.jetsen.smart.traffic.phone", Entry.Type.PACKAGE));
+        functionList.add(new Entry<String>("智慧教育", "com.jetsen.education", Entry.Type.PACKAGE));
+        functionList.add(new Entry<String>("美院作品展示", "com.jetsen.education.art", Entry.Type.PACKAGE));
+        listView.setAdapter(new FunctionListAdapter(functionList));
         searchList = new ArrayList<>();
     }
 
@@ -215,11 +223,29 @@ public class MainActivity extends Activity {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             // TODO Auto-generated method stub
-            Intent intent = ((MyEntry) listView.getAdapter().getItem(position)).getIntent();
-            if (intent == null) {
-                PubUtil.showText(context, "程序未安装");
+            Intent intent = null;
+            Entry entry = (Entry) listView.getAdapter().getItem(position);
+            if (entry != null) {
+                Object value = entry.getValue();
+                if (value instanceof Class) {
+                    logi("jump to Activity ");
+                    intent = new Intent(MainActivity.this, (Class<?>) value);
+                } else if (value instanceof String) {
+                    if (entry.getType() == Entry.Type.PACKAGE) {
+                        logi("jump to package");
+                        intent = pm.getLaunchIntentForPackage((String) value);
+                    } else {
+                        logi("jump value " + value);
+                    }
+                }
+
+                if (intent == null) {
+                    ToastUtil.showText(MainActivity.this, "not found application!");
+                } else {
+                    startActivity(intent);
+                }
             } else {
-                startActivity(intent);
+                ToastUtil.showText(MainActivity.this, "参数有误!");
             }
         }
     };
@@ -245,15 +271,15 @@ public class MainActivity extends Activity {
         return true;
     }
 
-    private class Myadapter extends BaseAdapter {
-        private ArrayList<MyEntry> list;
+    private class FunctionListAdapter extends BaseAdapter {
+        private ArrayList<Entry> list;
         private LayoutInflater inflater;
         private final int droidGreen = Color.parseColor("#A4C639");
 
-        public Myadapter(ArrayList<MyEntry> list) {
+        public FunctionListAdapter(ArrayList<Entry> list) {
             super();
             this.list = list;
-            inflater = LayoutInflater.from(context);
+            inflater = LayoutInflater.from(mContext);
         }
 
         @Override
@@ -282,7 +308,7 @@ public class MainActivity extends Activity {
                 convertView = inflater.inflate(R.layout.mainlistitem, null);
                 viewHolder = new ViewHolder();
                 viewHolder.textView = (TextView) convertView.findViewById(R.id.listappname);
-                viewHolder.badge = new BadgeView(context, viewHolder.textView);
+                viewHolder.badge = new BadgeView(mContext, viewHolder.textView);
                 viewHolder.badge.setBadgeBackgroundColor(droidGreen);
                 viewHolder.badge.setTextColor(Color.BLACK);
                 viewHolder.badge.setText("app");
@@ -290,7 +316,8 @@ public class MainActivity extends Activity {
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
             }
-            if (list.get(position).Isapp()) {
+            Entry value = list.get(position);
+            if (value != null && value.getType() == Entry.Type.PACKAGE) {
                 viewHolder.badge.show();
             } else {
                 viewHolder.badge.hide();
