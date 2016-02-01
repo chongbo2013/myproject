@@ -83,6 +83,7 @@ dependencies {
     compile project(':pull-to-refresh')
     compile project(':appcompat_v7')
     compile project(':drag-sort-adapter')
+    compile project(':circular-lib')
 
     compile files('libs/photoviewlibrary.jar')
 

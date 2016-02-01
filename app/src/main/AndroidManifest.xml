@@ -24,6 +24,9 @@
     <uses-permission android:name="com.android.vending.BILLING"/>
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
+    <!--android:allowBackup="false" 是否可通过adb backup和adb restore来进行对应用数据的备份和恢复
+        android:hardwareAccelerated="true" 是否启用硬件加速
+    -->
     <application
         android:name=".ProjectApplication"
         android:allowBackup="false"
@@ -94,6 +97,30 @@
         <activity
             android:name=".dragsort.DragSortActivity"
             android:theme="@style/DragTheme"/>
+
+        <activity
+            android:name=".circular.CircularProgressActivity"
+            android:theme="@android:style/Theme.Holo.Light"/>
+
+        <activity
+            android:name=".circular.Sample1Activity"
+            android:theme="@android:style/Theme.Holo.Light"/>
+
+        <activity
+            android:name=".circular.Sample2Activity"
+            android:theme="@android:style/Theme.Holo.Light"/>
+
+        <activity
+            android:name=".circular.Sample3Activity"
+            android:theme="@android:style/Theme.Holo.Light"/>
+
+        <activity
+            android:name=".circular.Sample4Activity"
+            android:theme="@android:style/Theme.Holo.Light"/>
+
+        <activity
+            android:name=".circular.Sample5Activity"
+            android:theme="@android:style/Theme.Holo.Light"/>
 
         <!-- DIYView -->
         <activity

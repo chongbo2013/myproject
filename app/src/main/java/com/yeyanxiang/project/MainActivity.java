@@ -27,6 +27,7 @@ import com.yeyanxiang.project.androidpn.AndroidpnMainActivity;
 import com.yeyanxiang.project.applist.ApplistActivity;
 import com.yeyanxiang.project.badgeview.BadgeViewActivity;
 import com.yeyanxiang.project.circlemenu.CircleMenuActivity;
+import com.yeyanxiang.project.circular.CircularProgressActivity;
 import com.yeyanxiang.project.diy.LayoutCollectActivity;
 import com.yeyanxiang.project.diy.RadialMenuActivity;
 import com.yeyanxiang.project.diy.TextVerticalActivity;
@@ -200,6 +201,7 @@ public class MainActivity extends com.yeyanxiang.project.activity.BaseActivity {
         functionList.add(new Entry<Class>("DLNA之phone端", DlnaPhoneActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("LoadToast", ToastActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("DragSort", DragSortActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Circular Progress", CircularProgressActivity.class, Entry.Type.CLASS));
 
 //        functionList.add(new Entry<String>("DLNA多媒体共享", "com.bubblesoft.android.bubbleupnp", Entry.Type.PACKAGE));
 //        functionList.add(new Entry<String>("百度地图 Demo", "baidumapsdk.demo", Entry.Type.PACKAGE));

@@ -6,14 +6,3 @@ build
 infer-out/
 local.properties
 captures/
-androidpn/build/
-asmack/build/
-listview-anims/build/
-page-indicator/build/
-pull-to-refresh/build/
-utils/build/
-views/build/
-vitamio3.0/build/
-xutilslib2.5.5/build/
-appcompat_v7/build/
-drag-sort-adapter/build/
