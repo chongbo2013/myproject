@@ -476,6 +476,10 @@
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Holo.Light.DarkActionBar"/>
 
+        <activity
+            android:name=".slider.SliderActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+
         <!-- 指示器 -->
         <activity
             android:name=".indicator.IndicatorListSamples"

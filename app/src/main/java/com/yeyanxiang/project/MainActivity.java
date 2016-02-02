@@ -63,6 +63,7 @@ import com.yeyanxiang.project.setting.SettingActivity;
 import com.yeyanxiang.project.sign.BluetoothActivity;
 import com.yeyanxiang.project.sign.ElectrocardioOffLineActivity;
 import com.yeyanxiang.project.sign.SignHistoryTabActivity;
+import com.yeyanxiang.project.slider.SliderActivity;
 import com.yeyanxiang.project.slidingmenu.SlidingMenuActivity;
 import com.yeyanxiang.project.slidingmenudemo.SlideExampleListActivity;
 import com.yeyanxiang.project.tab.FleepTabActivity;
@@ -202,6 +203,7 @@ public class MainActivity extends com.yeyanxiang.project.activity.BaseActivity {
         functionList.add(new Entry<Class>("LoadToast", ToastActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("DragSort", DragSortActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("Circular Progress", CircularProgressActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Slider Animations", SliderActivity.class, Entry.Type.CLASS));
 
 //        functionList.add(new Entry<String>("DLNA多媒体共享", "com.bubblesoft.android.bubbleupnp", Entry.Type.PACKAGE));
 //        functionList.add(new Entry<String>("百度地图 Demo", "baidumapsdk.demo", Entry.Type.PACKAGE));
