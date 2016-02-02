@@ -155,12 +155,12 @@ public class MainActivity extends com.yeyanxiang.project.activity.BaseActivity {
         functionList = new ArrayList<>();
 
         functionList.add(new Entry<Class>("DIY View", LayoutCollectActivity.class, Entry.Type.CLASS));
-        functionList.add(new Entry<Class>("Badge View", BadgeViewActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Badge View", BadgeViewActivity.class, Entry.Type.CLASS));//https://github.com/elevenetc/BadgeView.git
         functionList.add(new Entry<Class>("APP List", ApplistActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("Player", MediaPlayActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("Sliding Menu", SlidingMenuActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("Sliding Menu Demo", SlideExampleListActivity.class, Entry.Type.CLASS));
-        functionList.add(new Entry<Class>("Indicator", IndicatorListSamples.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Indicator", IndicatorListSamples.class, Entry.Type.CLASS));//https://github.com/JakeWharton/ViewPagerIndicator.git
         functionList.add(new Entry<Class>("Circle Menu", CircleMenuActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("Radia Menu", RadialMenuActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("Reside Menu", ResideMenuActivity.class, Entry.Type.CLASS));
@@ -200,10 +200,10 @@ public class MainActivity extends com.yeyanxiang.project.activity.BaseActivity {
         functionList.add(new Entry<Class>("消息推送", AndroidpnMainActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("消息推送2 openfire", FormLogin.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("DLNA之phone端", DlnaPhoneActivity.class, Entry.Type.CLASS));
-        functionList.add(new Entry<Class>("LoadToast", ToastActivity.class, Entry.Type.CLASS));
-        functionList.add(new Entry<Class>("DragSort", DragSortActivity.class, Entry.Type.CLASS));
-        functionList.add(new Entry<Class>("Circular Progress", CircularProgressActivity.class, Entry.Type.CLASS));
-        functionList.add(new Entry<Class>("Slider Animations", SliderActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("LoadToast", ToastActivity.class, Entry.Type.CLASS));//https://github.com/code-mc/loadtoast.git
+        functionList.add(new Entry<Class>("DragSort", DragSortActivity.class, Entry.Type.CLASS));//https://github.com/vinc3m1/DragSortAdapter.git
+        functionList.add(new Entry<Class>("Circular Progress", CircularProgressActivity.class, Entry.Type.CLASS));//https://github.com/dmytrodanylyk/circular-progress-button.git
+        functionList.add(new Entry<Class>("Slider Animations", SliderActivity.class, Entry.Type.CLASS));//https://github.com/daimajia/AndroidImageSlider.git
 
 //        functionList.add(new Entry<String>("DLNA多媒体共享", "com.bubblesoft.android.bubbleupnp", Entry.Type.PACKAGE));
 //        functionList.add(new Entry<String>("百度地图 Demo", "baidumapsdk.demo", Entry.Type.PACKAGE));
