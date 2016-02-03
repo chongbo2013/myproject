@@ -480,6 +480,10 @@
             android:name=".slider.SliderActivity"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
 
+        <activity
+            android:name=".dialog.NiftyDialogActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"/>
+
         <!-- 指示器 -->
         <activity
             android:name=".indicator.IndicatorListSamples"

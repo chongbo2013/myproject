@@ -28,6 +28,7 @@ import com.yeyanxiang.project.applist.ApplistActivity;
 import com.yeyanxiang.project.badgeview.BadgeViewActivity;
 import com.yeyanxiang.project.circlemenu.CircleMenuActivity;
 import com.yeyanxiang.project.circular.CircularProgressActivity;
+import com.yeyanxiang.project.dialog.NiftyDialogActivity;
 import com.yeyanxiang.project.diy.LayoutCollectActivity;
 import com.yeyanxiang.project.diy.RadialMenuActivity;
 import com.yeyanxiang.project.diy.TextVerticalActivity;
@@ -163,7 +164,7 @@ public class MainActivity extends com.yeyanxiang.project.activity.BaseActivity {
         functionList.add(new Entry<Class>("Indicator", IndicatorListSamples.class, Entry.Type.CLASS));//https://github.com/JakeWharton/ViewPagerIndicator.git
         functionList.add(new Entry<Class>("Circle Menu", CircleMenuActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("Radia Menu", RadialMenuActivity.class, Entry.Type.CLASS));
-        functionList.add(new Entry<Class>("Reside Menu", ResideMenuActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Reside Menu", ResideMenuActivity.class, Entry.Type.CLASS));//https://github.com/SpecialCyCi/AndroidResideMenu.git
         functionList.add(new Entry<Class>("Picker View", PickerViewActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("WebView", WebViewActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("SettingLayout", SettingActivity.class, Entry.Type.CLASS));
@@ -204,6 +205,9 @@ public class MainActivity extends com.yeyanxiang.project.activity.BaseActivity {
         functionList.add(new Entry<Class>("DragSort", DragSortActivity.class, Entry.Type.CLASS));//https://github.com/vinc3m1/DragSortAdapter.git
         functionList.add(new Entry<Class>("Circular Progress", CircularProgressActivity.class, Entry.Type.CLASS));//https://github.com/dmytrodanylyk/circular-progress-button.git
         functionList.add(new Entry<Class>("Slider Animations", SliderActivity.class, Entry.Type.CLASS));//https://github.com/daimajia/AndroidImageSlider.git
+        functionList.add(new Entry<Class>("Nifty Dialog", NiftyDialogActivity.class, Entry.Type.CLASS));//https://github.com/sd6352051/NiftyDialogEffects.git
+
+//        functionList.add(new Entry<Class>("", Class.class, Entry.Type.CLASS));
 
 //        functionList.add(new Entry<String>("DLNA多媒体共享", "com.bubblesoft.android.bubbleupnp", Entry.Type.PACKAGE));
 //        functionList.add(new Entry<String>("百度地图 Demo", "baidumapsdk.demo", Entry.Type.PACKAGE));

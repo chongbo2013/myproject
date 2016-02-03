@@ -84,7 +84,10 @@ dependencies {
     compile project(':drag-sort-adapter')
     compile project(':circular-lib')
     compile project(':slider-lib')
+    compile project(':dialog-lib')
+
     compile files('libs/photoviewlibrary.jar')
+
     compile 'com.google.code.gson:gson:2.5+'
     compile 'com.mcxiaoke.volley:library:1.0.+'
     compile 'com.jakewharton:butterknife:6.+'

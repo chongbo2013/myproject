@@ -1,8 +1,8 @@
 *.iml
+*.class
 .idea
 .gradle
-build
-*.class
-infer-out/
 local.properties
+build/
+infer-out/
 captures/
