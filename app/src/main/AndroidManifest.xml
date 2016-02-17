@@ -484,6 +484,10 @@
             android:name=".dialog.NiftyDialogActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar"/>
 
+        <activity android:name=".inject.InjectMainActivity"/>
+        <activity android:name=".inject.InjectProxyMainActivity"/>
+        <activity android:name="com.cnbn.android_test2.PassiveMainActivity"/>
+
         <!-- 指示器 -->
         <activity
             android:name=".indicator.IndicatorListSamples"

@@ -43,6 +43,7 @@ import com.yeyanxiang.project.image.ImageActivity1;
 import com.yeyanxiang.project.image.ImageActivity2;
 import com.yeyanxiang.project.image.ImgGroupActivity;
 import com.yeyanxiang.project.indicator.IndicatorListSamples;
+import com.yeyanxiang.project.inject.InjectMainActivity;
 import com.yeyanxiang.project.listviewanimations.ListViewAnimMainActivity;
 import com.yeyanxiang.project.mediaplayer.MediaPlayActivity;
 import com.yeyanxiang.project.mylist.CircleListViewActivity;
@@ -206,6 +207,7 @@ public class MainActivity extends com.yeyanxiang.project.activity.BaseActivity {
         functionList.add(new Entry<Class>("Circular Progress", CircularProgressActivity.class, Entry.Type.CLASS));//https://github.com/dmytrodanylyk/circular-progress-button.git
         functionList.add(new Entry<Class>("Slider Animations", SliderActivity.class, Entry.Type.CLASS));//https://github.com/daimajia/AndroidImageSlider.git
         functionList.add(new Entry<Class>("Nifty Dialog", NiftyDialogActivity.class, Entry.Type.CLASS));//https://github.com/sd6352051/NiftyDialogEffects.git
+        functionList.add(new Entry<Class>("动态加载Activity", InjectMainActivity.class, Entry.Type.CLASS));//https://github.com/sd6352051/NiftyDialogEffects.git
 
 //        functionList.add(new Entry<Class>("", Class.class, Entry.Type.CLASS));
 
