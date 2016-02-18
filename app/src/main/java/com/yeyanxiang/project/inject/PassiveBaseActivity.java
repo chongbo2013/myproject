@@ -45,6 +45,7 @@ public class PassiveBaseActivity extends Activity {
     private void loadResources(String apkPath) {
         if (TextUtils.isEmpty(apkPath)) {
             Log.i(getLocalClassName(), "loadResources fail apkPath null");
+            return;
         }
         try {
             AssetManager assetManager = AssetManager.class.newInstance();

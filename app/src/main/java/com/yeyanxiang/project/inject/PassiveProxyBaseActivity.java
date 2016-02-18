@@ -28,45 +28,85 @@ public class PassiveProxyBaseActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        if (mProxyActivity == null) super.onCreate(savedInstanceState);
     }
 
     @Override
     protected void onResume() {
+        if (mProxyActivity == null) super.onResume();
     }
 
     @Override
     protected void onStart() {
+        if (mProxyActivity == null) super.onStart();
     }
 
     @Override
     protected void onPause() {
+        if (mProxyActivity == null) super.onPause();
     }
 
     @Override
     protected void onStop() {
+        if (mProxyActivity == null) super.onStop();
     }
 
     @Override
     protected void onDestroy() {
+        if (mProxyActivity == null) super.onDestroy();
     }
 
     @Override
     public void setContentView(View view) {
-        if (mProxyActivity != null) mProxyActivity.setContentView(view);
+        if (mProxyActivity != null) {
+            mProxyActivity.setContentView(view);
+        } else {
+            super.setContentView(view);
+        }
     }
 
     @Override
     public void setContentView(int layoutResID) {
-        if (mProxyActivity != null) mProxyActivity.setContentView(layoutResID);
+        if (mProxyActivity != null) {
+            mProxyActivity.setContentView(layoutResID);
+        } else {
+            super.setContentView(layoutResID);
+        }
     }
 
     @Override
     public View findViewById(int id) {
-        return mProxyActivity == null ? null : mProxyActivity.findViewById(id);
+        if (mProxyActivity == null) {
+            return super.findViewById(id);
+        } else {
+            return mProxyActivity.findViewById(id);
+        }
     }
 
     @Override
     public void startActivity(Intent intent) {
-        if (mProxyActivity != null) mProxyActivity.startActivity(intent);
+        if (mProxyActivity != null) {
+            mProxyActivity.startActivity(intent);
+        } else {
+            super.startActivity(intent);
+        }
+    }
+
+    @Override
+    public void setTitle(CharSequence title) {
+        if (mProxyActivity != null) {
+            mProxyActivity.setTitle(title);
+        } else {
+            super.setTitle(title);
+        }
+    }
+
+    @Override
+    public void setTitle(int titleId) {
+        if (mProxyActivity != null) {
+            mProxyActivity.setTitle(titleId);
+        } else {
+            super.setTitle(titleId);
+        }
     }
 }
