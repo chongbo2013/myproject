@@ -68,9 +68,30 @@ android {
 //            versionNameSuffix ''
         }
     }
+
+    productFlavors {
+    }
+
+    applicationVariants.all { variants ->
+        def fileName = PROJECT_NAME;
+        variants.outputs.each { output ->
+            variants.outputs.each { productFlavor ->
+                println(productFlavor.name)
+                fileName += "-" + productFlavor.name
+            }
+
+            fileName += "-${versionName}"
+
+            if (output.zipAlign) {
+                def outputFile = output.outputFile
+                output.outputFile = new File(outputFile.parent, "${fileName}.apk")
+            }
+
+            def file = output.packageApplication.outputFile
+            output.packageApplication.outputFile = new File(file.parent, "${fileName}-unaligned.apk")
+        }
+    }
 }
-
-
 
 dependencies {
     compile project(':vitamio3.0')
