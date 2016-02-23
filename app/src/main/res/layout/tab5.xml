@@ -20,22 +20,22 @@
 
             <RadioButton
                 android:id="@+id/tab1"
-                style="@style/mytabtheme5"
+                style="@style/tabTheme5"
                 android:text="tab1" />
 
             <RadioButton
                 android:id="@+id/tab2"
-                style="@style/mytabtheme5"
+                style="@style/tabTheme5"
                 android:text="tab2" />
 
             <RadioButton
                 android:id="@+id/tab3"
-                style="@style/mytabtheme5"
+                style="@style/tabTheme5"
                 android:text="tab3" />
 
             <RadioButton
                 android:id="@+id/tab4"
-                style="@style/mytabtheme5"
+                style="@style/tabTheme5"
                 android:text="tab4" />
         </RadioGroup>
 

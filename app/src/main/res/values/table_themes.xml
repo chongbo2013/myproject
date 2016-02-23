@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="tabTheme1">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/mytabstytle1</item>
+        <item name="android:paddingTop">5.0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">5.0dp</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="tabTheme2">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/mytabstytle2</item>
+        <item name="android:padding">5.0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">5.0dp</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="tabTheme3">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:background">@drawable/mytabstytle3</item>
+        <item name="android:padding">5.0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">5.0dp</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="tabTheme4">
+        <item name="android:textColor">@drawable/mytabstytle4</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:padding">5.0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">5.0dp</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="tabTheme5">
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/mytabstytle8</item>
+        <item name="android:textColor">@drawable/mytabstytle7</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">bottom|center_horizontal</item>
+        <item name="android:padding">5.0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawablePadding">5.0dp</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <style name="tabTheme6">
+        <item name="android:background">@drawable/mytabstytle6</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+</resources>

@@ -13,7 +13,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.yeyanxiang.project.listviewanimations.MyListActivity;
 import com.yeyanxiang.project.R;
 import com.nhaarman.listviewanimations.itemmanipulation.ExpandableListItemAdapter;
 import com.nhaarman.listviewanimations.swinginadapters.prepared.AlphaInAnimationAdapter;
@@ -46,7 +45,7 @@ public class ExpandableListItemActivity extends MyListActivity {
         alphaInAnimationAdapter.setInitialDelayMillis(500);
         getListView().setAdapter(alphaInAnimationAdapter);
 
-        Toast.makeText(this, R.string.explainexpand, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, R.string.explainExpand, Toast.LENGTH_LONG).show();
     }
 
     private static class MyExpandableListItemAdapter extends ExpandableListItemAdapter<Integer> {
@@ -79,7 +78,7 @@ public class ExpandableListItemActivity extends MyListActivity {
             if (tv == null) {
                 tv = new TextView(mContext);
             }
-            tv.setText(mContext.getString(R.string.expandorcollapsecard, getItem(position)));
+            tv.setText(mContext.getString(R.string.expandOrcollapseCard, getItem(position)));
             return tv;
         }
 

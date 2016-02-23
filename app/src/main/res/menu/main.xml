@@ -5,8 +5,8 @@
         android:id="@+id/github"
         android:icon="@drawable/ic_action_github"
         android:showAsAction="always"
-        android:title="@string/github_label"
-        android:titleCondensed="@string/github"
+        android:title="@string/gitHubLabel"
+        android:titleCondensed="@string/gitHub"
         android:visible="true">
     </item>
 

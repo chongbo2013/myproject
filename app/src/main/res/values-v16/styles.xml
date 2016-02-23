@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="ShimmerTextViewStyle">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+</resources>

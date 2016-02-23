@@ -39,7 +39,7 @@
         <!-- MAIN -->
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main"
+            android:label="@string/project"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -171,35 +171,35 @@
             android:theme="@style/ListViewAnimTheme"/>
         <activity
             android:name=".listviewanimations.GoogleCardsActivity"
-            android:label="@string/googlecards"
+            android:label="@string/googleCards"
             android:theme="@style/ListViewAnimTheme"/>
         <activity
             android:name=".listviewanimations.ItemManipulationsExamplesActivity"
-            android:label="@string/itemmanipulation"
+            android:label="@string/itemManipulation"
             android:theme="@style/ListViewAnimTheme"/>
         <activity
             android:name=".listviewanimations.DragAndDropActivity"
-            android:label="@string/draganddrop"
+            android:label="@string/dragAndDrop"
             android:theme="@style/ListViewAnimTheme"/>
         <activity
             android:name=".listviewanimations.SwipeDismissActivity"
-            android:label="@string/swipedismiss"
+            android:label="@string/swipeDismiss"
             android:theme="@style/ListViewAnimTheme"/>
         <activity
             android:name=".listviewanimations.AnimateDismissActivity"
-            android:label="@string/animateremoval"
+            android:label="@string/animateRemoval"
             android:theme="@style/ListViewAnimTheme"/>
         <activity
             android:name=".listviewanimations.AnimateAdditionActivity"
-            android:label="@string/animateaddition"
+            android:label="@string/animateAddition"
             android:theme="@style/ListViewAnimTheme"/>
         <activity
             android:name=".listviewanimations.GridViewActivity"
-            android:label="@string/gridviewexample"
+            android:label="@string/gridViewExample"
             android:theme="@style/ListViewAnimTheme"/>
         <activity
             android:name=".listviewanimations.ExpandableListItemActivity"
-            android:label="@string/expandablelistitemadapter"
+            android:label="@string/expandableListItems"
             android:theme="@style/ListViewAnimTheme"/>
 
         <!-- 下拉刷新 -->
@@ -483,6 +483,10 @@
         <activity
             android:name=".dialog.NiftyDialogActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar"/>
+
+        <activity android:name=".shimmer.ShimmerMainActivity"/>
+        
+        <activity android:name=".shimmer.ShimmerMainActivity1"/>
 
         <activity android:name=".inject.InjectMainActivity"/>
         <activity android:name=".inject.InjectProxyMainActivity"/>

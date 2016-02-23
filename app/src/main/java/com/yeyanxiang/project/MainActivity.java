@@ -62,6 +62,8 @@ import com.yeyanxiang.project.reference.ReferenceActivity;
 import com.yeyanxiang.project.referencedemo.PullToRefreshLauncherActivity;
 import com.yeyanxiang.project.resideMenu.ResideMenuActivity;
 import com.yeyanxiang.project.setting.SettingActivity;
+import com.yeyanxiang.project.shimmer.ShimmerMainActivity;
+import com.yeyanxiang.project.shimmer.ShimmerMainActivity1;
 import com.yeyanxiang.project.sign.BluetoothActivity;
 import com.yeyanxiang.project.sign.ElectrocardioOffLineActivity;
 import com.yeyanxiang.project.sign.SignHistoryTabActivity;
@@ -207,7 +209,9 @@ public class MainActivity extends com.yeyanxiang.project.activity.BaseActivity {
         functionList.add(new Entry<Class>("Circular Progress", CircularProgressActivity.class, Entry.Type.CLASS));//https://github.com/dmytrodanylyk/circular-progress-button.git
         functionList.add(new Entry<Class>("Slider Animations", SliderActivity.class, Entry.Type.CLASS));//https://github.com/daimajia/AndroidImageSlider.git
         functionList.add(new Entry<Class>("Nifty Dialog", NiftyDialogActivity.class, Entry.Type.CLASS));//https://github.com/sd6352051/NiftyDialogEffects.git
-        functionList.add(new Entry<Class>("动态加载Activity", InjectMainActivity.class, Entry.Type.CLASS));//https://github.com/sd6352051/NiftyDialogEffects.git
+        functionList.add(new Entry<Class>("动态加载Activity", InjectMainActivity.class, Entry.Type.CLASS));
+        functionList.add(new Entry<Class>("Shimmer", ShimmerMainActivity.class, Entry.Type.CLASS));//https://github.com/facebook/shimmer-android
+        functionList.add(new Entry<Class>("Shimmer1", ShimmerMainActivity1.class, Entry.Type.CLASS));//https://github.com/RomainPiel/Shimmer-android.git
 
 //        functionList.add(new Entry<Class>("", Class.class, Entry.Type.CLASS));
 

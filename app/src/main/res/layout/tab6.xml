@@ -19,22 +19,22 @@
 
             <RadioButton
                 android:id="@+id/depart1"
-                style="@style/mytabtheme6"
+                style="@style/tabTheme6"
                 android:text="区教委 " />
 
             <RadioButton
                 android:id="@+id/depart2"
-                style="@style/mytabtheme6"
+                style="@style/tabTheme6"
                 android:text="区农委 " />
 
             <RadioButton
                 android:id="@+id/depart3"
-                style="@style/mytabtheme6"
+                style="@style/tabTheme6"
                 android:text="商务委 " />
 
             <RadioButton
                 android:id="@+id/depart4"
-                style="@style/mytabtheme6"
+                style="@style/tabTheme6"
                 android:text="卫生局 " />
         </RadioGroup>
 

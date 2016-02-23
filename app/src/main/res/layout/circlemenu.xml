@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icon_myspace"
-            circle:name="@string/myspace"/>
+            circle:name="@string/mySpace"/>
 
         <com.yeyanxiang.view.circleview.CircleImageView
             android:id="@+id/main_google_image"
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icon_linkedin"
-            circle:name="@string/linkedin"/>
+            circle:name="@string/linkedIn"/>
 
         <com.yeyanxiang.view.circleview.CircleImageView
             android:id="@+id/main_twitter_image"
@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icon_wordpress"
-            circle:name="@string/wordpress"/>
+            circle:name="@string/wordPress"/>
     </com.yeyanxiang.view.circleview.CircleLayout>
 
     <TextView

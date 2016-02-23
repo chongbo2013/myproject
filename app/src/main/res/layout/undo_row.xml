@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:padding="10dp"
-        android:text="@string/itemdeleted"
+        android:text="@string/itemDeleted"
         android:textColor="#ffffff"
         android:textSize="16sp" />
 
@@ -34,7 +34,7 @@
         android:drawableLeft="@drawable/ic_undo"
         android:padding="10dp"
         android:paddingRight="8dp"
-        android:text="@string/taptoundo"
+        android:text="@string/tapToUndo"
         android:textColor="#ffffff"
         android:textSize="16sp" />
 

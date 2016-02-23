@@ -20,28 +20,28 @@
 
             <RadioButton
                 android:id="@+id/tab1"
-                style="@style/mytabtheme1"
-                android:text="@string/politicsnews" />
+                style="@style/tabTheme1"
+                android:text="@string/politicsNews" />
 
             <RadioButton
                 android:id="@+id/tab2"
-                style="@style/mytabtheme1"
-                android:text="@string/departnews" />
+                style="@style/tabTheme1"
+                android:text="@string/departNews" />
 
             <RadioButton
                 android:id="@+id/tab3"
-                style="@style/mytabtheme1"
-                android:text="@string/activitysubject" />
+                style="@style/tabTheme1"
+                android:text="@string/activitySubject" />
 
             <RadioButton
                 android:id="@+id/tab4"
-                style="@style/mytabtheme1"
-                android:text="@string/greatproject" />
+                style="@style/tabTheme1"
+                android:text="@string/greatProject" />
 
             <RadioButton
                 android:id="@+id/tab5"
-                style="@style/mytabtheme1"
-                android:text="@string/societynews" />
+                style="@style/tabTheme1"
+                android:text="@string/societyNews" />
 
         </RadioGroup>
 

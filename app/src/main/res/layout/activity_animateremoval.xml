@@ -9,7 +9,7 @@
         android:id="@+id/activity_animateremoval_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/removeselected" />
+        android:text="@string/removeSelected" />
 
     <ListView
         android:id="@+id/activity_animateremoval_listview"

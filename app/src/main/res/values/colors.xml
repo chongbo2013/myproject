@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="imgbgcolor">#333333</color>
+    <color name="imgBg">#333333</color>
     <color name="green">#00FF00</color>
     <color name="bg">#d9d9d1</color>
-    <color name="listselector">#00000000</color>
+    <color name="listSelector">#00000000</color>
     <color name="radio_select">#ffd9e6f0</color>
-    <color name="tableline">#5790f9</color>
+    <color name="tableLine">#5790f9</color>
     <color name="red">#900</color>
     <color name="blue">#009</color>
 
@@ -17,6 +17,7 @@
         <item>@color/holo_purple_dark</item>
         <item>@color/holo_red_dark</item>
     </integer-array>
+
     <integer-array name="gplus_colors">
         <item>@color/gplus_color_1</item>
         <item>@color/gplus_color_2</item>
@@ -35,7 +36,7 @@
     <color name="holo_red_dark">#cc0000</color>
     <color name="grey">#C1CDCD</color>
     <color name="yellow">#ff7300</color>
-    
+
     <color name="main_bg">#14439C</color>
     <color name="dark_blue">#25865E</color>
     <color name="light_blue">#7FC5B0</color>
@@ -49,5 +50,8 @@
     <color name="holo_red_light">#33ff4444</color>
     <color name="holo_orange_light">#33ffbb33</color>
     <color name="holo_purple_light">#33aa66cc</color>
+
+    <color name="preset_button_background">@android:color/transparent</color>
+    <color name="preset_button_background_selected">#66000000</color>
 
 </resources>
