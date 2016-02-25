@@ -1,7 +1,7 @@
 package com.yeyanxiang.project.diy;
 
 import com.yeyanxiang.project.R;
-import com.yeyanxiang.view.TextViewVertical;
+import com.yeyanxiang.view.text.TextViewVertical;
 
 import android.app.Activity;
 import android.graphics.Typeface;

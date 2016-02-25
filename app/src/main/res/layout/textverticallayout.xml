@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:background="#ffffffff" >
 
-    <com.yeyanxiang.view.TextViewVertical
+    <com.yeyanxiang.view.text.TextViewVertical
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"

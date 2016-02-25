@@ -1,4 +1,4 @@
-package com.yeyanxiang.view;
+package com.yeyanxiang.view.text;
 
 import android.content.Context;
 import android.graphics.Bitmap;
