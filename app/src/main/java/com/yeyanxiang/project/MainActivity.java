@@ -44,6 +44,7 @@ import com.yeyanxiang.project.image.ImageActivity2;
 import com.yeyanxiang.project.image.ImgGroupActivity;
 import com.yeyanxiang.project.indicator.IndicatorListSamples;
 import com.yeyanxiang.project.inject.InjectMainActivity;
+import com.yeyanxiang.project.interpolator.InterpolatorMainActivity;
 import com.yeyanxiang.project.listviewanimations.ListViewAnimMainActivity;
 import com.yeyanxiang.project.mediaplayer.MediaPlayActivity;
 import com.yeyanxiang.project.mylist.CircleListViewActivity;
@@ -212,6 +213,7 @@ public class MainActivity extends com.yeyanxiang.project.activity.BaseActivity {
         functionList.add(new Entry<Class>("动态加载Activity", InjectMainActivity.class, Entry.Type.CLASS));
         functionList.add(new Entry<Class>("Shimmer", ShimmerMainActivity.class, Entry.Type.CLASS));//https://github.com/facebook/shimmer-android
         functionList.add(new Entry<Class>("Shimmer1", ShimmerMainActivity1.class, Entry.Type.CLASS));//https://github.com/RomainPiel/Shimmer-android.git
+        functionList.add(new Entry<Class>("Interpolator", InterpolatorMainActivity.class, Entry.Type.CLASS));//https://github.com/cimi-chen/EaseInterpolator
 
 //        functionList.add(new Entry<Class>("", Class.class, Entry.Type.CLASS));
 

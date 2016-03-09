@@ -107,6 +107,7 @@ dependencies {
     compile project(':slider-lib')
     compile project(':dialog-lib')
     compile project(':shimmer-lib')
+    compile project(':interpolator-lib')
 
     compile files('libs/photoviewlibrary.jar')
 
