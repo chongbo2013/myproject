@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:oak="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="Reset" />
+
+    <com.yeyanxiang.view.svg.AnimatedSvgView
+        android:id="@+id/animated_svg_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        oak:oakSvgFillStart="1200"
+        oak:oakSvgFillTime="1000"
+        oak:oakSvgImageSizeX="410"
+        oak:oakSvgImageSizeY="410"
+        oak:oakSvgTraceTime="2000"
+        oak:oakSvgTraceTimePerGlyph="1000" />
+</RelativeLayout>

@@ -71,6 +71,7 @@ import com.yeyanxiang.project.sign.SignHistoryTabActivity;
 import com.yeyanxiang.project.slider.SliderActivity;
 import com.yeyanxiang.project.slidingmenu.SlidingMenuActivity;
 import com.yeyanxiang.project.slidingmenudemo.SlideExampleListActivity;
+import com.yeyanxiang.project.svg.SvgAnimActivity;
 import com.yeyanxiang.project.tab.FleepTabActivity;
 import com.yeyanxiang.project.tab.MyTabActivity;
 import com.yeyanxiang.project.timeline.TimeLineActivity;
@@ -214,6 +215,7 @@ public class MainActivity extends com.yeyanxiang.project.activity.BaseActivity {
         functionList.add(new Entry<Class>("Shimmer", ShimmerMainActivity.class, Entry.Type.CLASS));//https://github.com/facebook/shimmer-android
         functionList.add(new Entry<Class>("Shimmer1", ShimmerMainActivity1.class, Entry.Type.CLASS));//https://github.com/RomainPiel/Shimmer-android.git
         functionList.add(new Entry<Class>("Interpolator", InterpolatorMainActivity.class, Entry.Type.CLASS));//https://github.com/cimi-chen/EaseInterpolator
+        functionList.add(new Entry<Class>("SvgAnim", SvgAnimActivity.class, Entry.Type.CLASS));
 
 //        functionList.add(new Entry<Class>("", Class.class, Entry.Type.CLASS));
 
